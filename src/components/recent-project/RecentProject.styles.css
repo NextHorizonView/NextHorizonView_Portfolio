@@ -1,0 +1,50 @@
+.recent-project-section {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-btn {
+    width: 160px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 27px;
+}
+
+.recent-project-header {
+    font-size: 45px;
+    margin: 0;
+    text-align: start;
+}
+
+.recent-project-container {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: start;
+    align-items: start;
+    width: 80vw;
+}
+
+.recent-projrct-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.project-img {
+    max-width: 100%;
+}
+
+
+@media (max-width: 1040px) {
+    .recent-project-container {
+        flex-direction: column;
+        width: 95vw;
+    }
+}

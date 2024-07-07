@@ -1,0 +1,43 @@
+.testimonial-card-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 38px;
+    padding: 35px 35px 10px 35px;
+    background: linear-gradient(#5566FF, #6F7BFF);
+    min-width: 475px;
+    height: 415px;
+    justify-content: space-between;
+}
+
+.star-container {
+    display: flex;
+    gap: 3px;
+}
+
+.person-detail {
+    display: flex;
+    align-items: center;
+    gap: 4px
+}
+
+.person-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.person-img {
+    width: 80px;
+    height: 80px;
+}
+
+@media(max-width: 540px) {
+    .testimonial-card-container {
+        background: black;
+        min-width: auto;
+        height: auto;
+        gap: 8px;
+        align-items: start;
+        padding: 30px 0;
+    }
+}

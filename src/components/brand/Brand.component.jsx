@@ -1,0 +1,43 @@
+import React from 'react'
+import './Brand.styles.css'
+import brandImg from '../../assets/brand-banner.png'
+import brandText1 from '../../assets/horizonView-1.png'
+import brandText2 from '../../assets/horizonView-2.png'
+import Sp1 from '../../assets/sp1.png'
+import Sp2 from '../../assets/sp2.png'
+import Sp3 from '../../assets/sp3.png'
+import Sp4 from '../../assets/sp-4.png'
+import Sp5 from '../../assets/sp5.png'
+import Sp6 from '../../assets/sp-6.png'
+import video from '../../assets/video.mp4'
+
+const Brand = () => {
+    return (
+        <section className='brand-section'>
+            <div className='brand-video-container'>
+                <video autoPlay={true} muted loop width="100%" className="videoPlayer" src={video}></video>
+            </div>
+            <p className='brand-text'>Our designs are featured on:</p>
+            <div className='brand-features'>
+                <div className='scroll'>
+                    <img src={Sp1} className='brand-img' />
+                    <img src={Sp2} className='brand-img' />
+                    <img src={Sp3} className='brand-img' />
+                    <img src={Sp4} className='brand-img' />
+                    <img src={Sp5} className='brand-img' />
+                    <img src={Sp6} className='brand-img' />
+                </div>
+                <div className='scroll scroll2'>
+                    <img src={Sp1} className='brand-img' />
+                    <img src={Sp2} className='brand-img' />
+                    <img src={Sp3} className='brand-img' />
+                    <img src={Sp4} className='brand-img' />
+                    <img src={Sp5} className='brand-img' />
+                    <img src={Sp6} className='brand-img' />
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Brand

@@ -1,0 +1,288 @@
+
+
+h1 {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 64px;
+    position: relative;
+    z-index: 999;
+}
+
+.italic {
+    font-style: italic;
+    font-weight: 200;
+}
+
+
+
+.project-section {
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-btn {
+    border: 1px solid #fff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 158px;
+    height: 53px;
+    border-radius: 27px;
+}
+
+.love-us-section {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.love-us-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+
+.love-us-card {
+    padding: 44px 60px 10px 60px;
+    width: 490px;
+    height: 440px;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+.love-us-card-img {
+    width: 120px;
+    height: 120px;
+}
+
+.who-we-are-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.who-we-are-wrapper {
+    width: 80%;
+    background-color: #121212;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.who-we-are-frame {
+    background-image: url(../../assets/who-we-are-frame.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 160px;
+    width: 100%;
+    border-radius: 36px;
+}
+
+.list {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.who-we-are-para {
+    font-size: 64px;
+}
+
+.book-call-btn-wrapper {
+    display: flex;
+    cursor: pointer;
+    /* position: relative; */
+    width: 285px;
+}
+
+.book-call-btn {
+    background-color: #ffffff;
+    width: 220px;
+    height: 60px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    transition: all 200ms ease-out;
+}
+
+.book-call-btn-arr {
+    background-color: #ffffff;
+    width: 65px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    margin-left: 2px;
+    transition: all 200ms ease-out;
+}
+
+.book-call-btn-wrapper:hover {
+    .book-call-btn-arr {
+        transform: translateX(-220px);
+    }
+    .book-call-btn {
+        transform: translateX(65px);
+    }
+}
+
+.services-section {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.service-card-container {
+    position: relative;
+    padding-top: 40px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.services-spotlight {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(farthest-side, #383F79, transparent);
+}
+
+.ready-to-scale {
+    background: url(../../assets/scale.png);
+    padding: 100px 0;
+    margin: 150px 0;
+    width: 80%;
+    min-height: 600px;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ready-to-scale-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ready-to-scale-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+@media(max-width: 1920px) {
+    .love-us-card {
+        width: 300px;
+        height: 300px;
+        padding: 44px 10px 10px 10px;
+    }
+    .love-us-card-img {
+        width: 80px;
+        height: 80px;
+    }
+    .love-us-card-text {
+        font-size: 16px;
+    }
+    .who-we-are-frame {
+        padding: 100px 120px;
+    }
+    .who-we-are-para  {
+        font-size: 48px;
+        margin: 0;
+    }
+}
+
+@media(max-width: 1040px) {
+    .love-us-card-container {
+        flex-direction: column;
+    }
+    .who-we-are-frame {
+        padding: 60px 80px;
+        background-image: url(../../assets//who-we-are-frame-md.png);
+    }
+    .who-we-are-para  {
+        font-size: 48px;
+    }
+    .service-card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .services-spotlight {
+        display: none;
+    }
+}
+
+@media(max-width: 900px) {
+    .hero-section {
+        background-image: url(../../assets/hero-bg-sm.png)
+    }
+    h1 {
+        font-size: 48px;
+    } 
+    .italic {
+        font-size: 48px;
+    }
+    .who-we-are-frame {
+        padding: 40px 40px;
+        background-image: url(../../assets/who-we-are-frame-sm.png);
+    }
+    .who-we-are-para {
+        font-size: 32px;
+    }
+    .service-card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 540px) {
+    .hero-section {
+        background-image: url(../../assets/hero-bg-sm.png)
+    }
+    h1 {
+        font-size: 28px;
+    } 
+    .italic {
+        font-size: 28px;
+    }
+
+    .sponsor-banner {
+        width: 90vw;
+    }
+
+    .love-us-card {
+        background: linear-gradient(#5566FF, #6F7BFF);
+        align-items: start;
+    }
+
+    .who-we-are-wrapper {
+        background-color: transparent;
+    }
+    .who-we-are-frame {
+        padding: 20px 10px;
+        background-image: url(../../assets/who-we-are-frame-sm.png);
+    }
+    .who-we-are-para {
+        font-size: 24px;
+    }
+
+    .service-card-container {
+        width: 90vw;
+    }
+}

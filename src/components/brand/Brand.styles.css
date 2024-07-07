@@ -1,0 +1,123 @@
+.brand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.brand-img-container {
+    background-image: url(../../assets/brand-banner.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes smoothbounceball{ 
+    from { transform: translate3d(0, 0, 0);} 
+    to { transform: translate3d(0, 50px, 0);} 
+} 
+
+.brand-banner-text {
+    margin: 0;
+    width: 60vw;
+    scale: 0.7;
+}
+
+.brand-bouncing-text {
+    opacity: 0.5;
+    animation: smoothbounceball 1s; 
+    animation-direction: alternate; 
+    animation-iteration-count: infinite; 
+}
+
+.brand-text {
+    margin: 40px 0;
+}
+
+.brand-img {
+    scale: 0.8;
+    margin: 0 30px;
+}
+
+.brand-features {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 70vw;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.brand-features div {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    animation-delay: calc(20s * -1);
+}
+
+.brand-features div:nth-child(2) {
+    animation: scroll2 20s linear infinite;
+    animation-delay: calc(20s / -2);
+}
+
+.brand-video-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+@keyframes scroll2 {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-200%); }
+}
+
+@media(max-width: 900px) {
+    .brand-features {
+        width: 85vw;
+    }
+}
+
+@media(max-width: 540px) {
+    .brand-img {
+        scale: 0.4;
+        margin: 0 10px;
+    }
+    .brand-features {
+        width: 95vw;
+        -webkit-mask-image: none
+    }
+    .brand-img-container { 
+        width: 95vw;
+        height: 200px;
+    }
+    .brand-bouncing-text {
+        display: none;
+    }
+
+    .brand-features div {
+        animation: none;
+        display: grid;
+        place-items: stretch;
+        grid-template-columns: 45% 45%;
+    }
+
+    .brand-features div:nth-child(2) {
+        animation: none;
+    }
+
+    .scroll {
+        
+    }
+
+    .scroll2 {
+        display: none !important;
+    }
+}
