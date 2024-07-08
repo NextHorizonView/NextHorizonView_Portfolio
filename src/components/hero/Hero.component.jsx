@@ -1,7 +1,5 @@
 import React from 'react'
 import './Hero.styles.css'
-import spinningMetal from '../../assets/spinning-metal.png'
-import hoverMetal from '../../assets/hover-metal.png'
 
 const Hero = () => {
     return (
@@ -12,8 +10,6 @@ const Hero = () => {
                     brand with Horizon View?</h1>
                 <p className='hero-text'>Empowering startups with award-winning design solutions to
                     stand out in the market and thrive.</p>
-                <img className='hero-img-spin' src={spinningMetal} />
-                <img className='hero-img-hover' src={hoverMetal} />
                 <div className='hero-btn-container'>
                     <div className='hero-btn hero-btn-primary'>
                         <p className='hero-btn-text'>Contact us</p>

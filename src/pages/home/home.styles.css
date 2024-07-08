@@ -1,5 +1,9 @@
 
 
+.home-page {
+    overflow-x: hidden;
+}
+
 h1 {
     margin-top: 60px;
     text-align: center;
@@ -31,70 +35,6 @@ h1 {
     width: 158px;
     height: 53px;
     border-radius: 27px;
-}
-
-.love-us-section {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.love-us-card-container {
-    display: flex;
-    justify-content: center;
-    gap: 64px;
-}
-
-.love-us-card {
-    padding: 44px 60px 10px 60px;
-    width: 490px;
-    height: 440px;
-    background-color: #121212;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 25px;
-}
-
-.love-us-card-img {
-    width: 120px;
-    height: 120px;
-}
-
-.who-we-are-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.who-we-are-wrapper {
-    width: 80%;
-    background-color: #121212;
-    padding-top: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.who-we-are-frame {
-    background-image: url(../../assets/who-we-are-frame.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 100px 160px;
-    width: 100%;
-    border-radius: 36px;
-}
-
-.list {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.who-we-are-para {
-    font-size: 64px;
 }
 
 .book-call-btn-wrapper {
@@ -138,7 +78,7 @@ h1 {
 }
 
 .services-section {
-    padding-top: 80px;
+    padding: 80px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,6 +89,7 @@ h1 {
     position: relative;
     padding-top: 40px;
     width: 80%;
+    max-width: 1600px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -165,11 +106,15 @@ h1 {
     padding: 100px 0;
     margin: 150px 0;
     width: 80%;
+    max-width: 1600px;
     min-height: 600px;
     border-radius: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .ready-to-scale-section {
@@ -188,37 +133,18 @@ h1 {
 }
 
 @media(max-width: 1920px) {
-    .love-us-card {
-        width: 300px;
-        height: 300px;
-        padding: 44px 10px 10px 10px;
-    }
-    .love-us-card-img {
-        width: 80px;
-        height: 80px;
-    }
-    .love-us-card-text {
-        font-size: 16px;
-    }
     .who-we-are-frame {
         padding: 100px 120px;
-    }
-    .who-we-are-para  {
-        font-size: 48px;
-        margin: 0;
     }
 }
 
 @media(max-width: 1040px) {
-    .love-us-card-container {
-        flex-direction: column;
-    }
     .who-we-are-frame {
         padding: 60px 80px;
         background-image: url(../../assets//who-we-are-frame-md.png);
     }
     .who-we-are-para  {
-        font-size: 48px;
+        font-size: 32px;
     }
     .service-card-container {
         grid-template-columns: 1fr 1fr;
@@ -244,7 +170,7 @@ h1 {
         background-image: url(../../assets/who-we-are-frame-sm.png);
     }
     .who-we-are-para {
-        font-size: 32px;
+        font-size: 28px;
     }
     .service-card-container {
         grid-template-columns: 1fr;
@@ -279,10 +205,14 @@ h1 {
         background-image: url(../../assets/who-we-are-frame-sm.png);
     }
     .who-we-are-para {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .service-card-container {
         width: 90vw;
+    }
+
+    .ready-to-scale {
+        padding: 0 0;
     }
 }

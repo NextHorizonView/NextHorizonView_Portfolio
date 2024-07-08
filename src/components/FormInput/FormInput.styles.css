@@ -1,0 +1,24 @@
+.form-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.form-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.form-input-container .form-input {
+    border: 1px solid #6E6E6E;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: black;
+    width: 100%;
+}
+
+.form-input-container input::placeholder {
+    font-size: 16px;
+}

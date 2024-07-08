@@ -8,29 +8,29 @@ const testimonialData = [
     {
         numOfStars: 5,
         description: 'Integration with our existing tools was seamless. Scalable fits perfectly into our workflow.',
-        name: 'Bebo',
-        designation: 'CEO, of Bebo Corp.',
+        name: 'Harsh Vishwakarma',
+        designation: 'CTO, of Href.',
         photo: photo
     },
     {
         numOfStars: 5,
         description: 'Integration with our existing tools was seamless. Scalable fits perfectly into our workflow.',
-        name: 'Bebo',
-        designation: 'CEO, of Bebo Corp.',
+        name: 'Harsh Vishwakarma',
+        designation: 'CTO, of Href.',
         photo: photo,
     },
     {
         numOfStars: 5,
         description: 'Integration with our existing tools was seamless. Scalable fits perfectly into our workflow.',
-        name: 'Bebo',
-        designation: 'CEO, of Bebo Corp.',
+        name: 'Harsh Vishwakarma',
+        designation: 'CTO, of Href.',
         photo: photo
     },
     {
         numOfStars: 5,
         description: 'Integration with our existing tools was seamless. Scalable fits perfectly into our workflow.',
-        name: 'Bebo',
-        designation: 'CEO, of Bebo Corp.',
+        name: 'Harsh Vishwakarma',
+        designation: 'CTO, of Href.',
         photo: photo
     },
 ]

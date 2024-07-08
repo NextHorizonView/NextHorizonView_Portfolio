@@ -49,7 +49,7 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 70vw;
+    max-width: 880px;
     -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
@@ -68,6 +68,7 @@
     display: flex;
     justify-content: center;
     max-width: 1000px;
+    padding: 0 60px;
 }
 
 @keyframes scroll {
@@ -104,9 +105,9 @@
 
     .brand-features div {
         animation: none;
-        display: grid;
-        place-items: stretch;
-        grid-template-columns: 45% 45%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .brand-features div:nth-child(2) {

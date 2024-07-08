@@ -1,0 +1,50 @@
+.button-component {
+    background-color: #fff;
+    outline: none;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: #5660C1;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+    border: 0;
+    overflow: hidden; /* Ensure the pseudo-element stays within the button boundaries */
+}
+
+.button-component:hover,
+.button-component:focus {
+    color: white;
+    outline: none;
+}
+
+.button-component::before {
+    border-radius: 8px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #5660C1;
+    transition: transform 1000ms ease-out, background-color 1000ms ease-out;
+    transform-origin: left;
+    z-index: -1;
+    transform: scaleX(0);
+}
+
+.button-component:hover::before,
+.button-component:focus::before {
+    transform: scaleX(1);   
+}
+
+.button-component .btn-text {
+    text-align: center;
+    font-size: 18px; /* Adjust font size as needed */
+    margin: 0; /* Remove margin if it affects layout */
+}

@@ -42,53 +42,30 @@ const RecentProject = () => {
       <p className='recent-project-text'>Begin your design journey with avocado tech.</p>
       <div className='recent-project-container'>
         <div className='recent-projrct-item'>
-          <h2 className='recent-project-header'>Recent Projects</h2>
-          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className=''>
+          <motion.h2 initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className='recent-project-header'>Recent Projects</motion.h2>
+          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className='project-card'>
             <img src={projectData[0].img} alt='project1' className='project-img' />
             <h3>{projectData[0].name}</h3>
             <p>{projectData[0].year}.{projectData[0].genre}</p>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className=''>
+          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className='project-card'>
             <img src={projectData[1].img} alt='project1' className='project-img' />
             <h3>{projectData[0].name}</h3>
             <p>{projectData[0].year}.{projectData[0].genre}</p>
           </motion.div>
         </div>
         <div className='recent-projrct-item'>
-          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className=''>
+          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className='project-card'>
             <img src={projectData[2].img} alt='project1' className='project-img' />
             <h3>{projectData[0].name}</h3>
             <p>{projectData[0].year}.{projectData[0].genre}</p>
           </motion.div>
-          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className=''>
+          <motion.div initial={{ opacity: 0, scale: 0.2 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-200px', once: true }} className='project-card'>
             <img src={projectData[3].img} alt='project1' className='project-img' />
             <h3>{projectData[0].name}</h3>
             <p>{projectData[0].year}.{projectData[0].genre}</p>
           </motion.div>
         </div>
-        {/* <div className='grid-container'>
-          <h1 className='grid-item grid-item-1'>Recent Projects</h1>
-          <div className='grid-item grid-item-2'>
-            <img src={projectData[0].img} alt='project1' className='project-img' />
-            <h3>{projectData[0].name}</h3>
-            <p>{projectData[0].year}.{projectData[0].genre}</p>
-          </div>
-          <div className='grid-item grid-item-3'>
-            <img src={projectData[0].img} alt='project1' className='project-img' />
-            <h3>{projectData[0].name}</h3>
-            <p>{projectData[0].year}.{projectData[0].genre}</p>
-          </div>
-          <div className='grid-item grid-item-4'>
-            <img src={projectData[0].img} alt='project1' className='project-img' />
-            <h3>{projectData[0].name}</h3>
-            <p>{projectData[0].year}.{projectData[0].genre}</p>
-          </div>
-          <div className='grid-item grid-item-5'>
-            <img src={projectData[0].img} alt='project1' className='project-img' />
-            <h3>{projectData[0].name}</h3>
-            <p>{projectData[0].year}.{projectData[0].genre}</p>
-          </div>
-        </div> */}
       </div>
     </section>
   )

@@ -6,10 +6,12 @@ const TestimonialCard = ({ testimonial }) => {
     const stars = new Array(testimonial.numOfStars).fill(0);
     return (
         <div className='testimonial-card-container'>
-            <div className='star-container'>
-                {stars.map((_, id) => <img src={star} key={id} />)}
+            <div>
+                <div className='star-container'>
+                    {stars.map((_, id) => <img src={star} key={id} />)}
+                </div>
+                <p>{testimonial.description}</p>
             </div>
-            <p>{testimonial.description}</p>
             <div className='person-detail'>
                 <img className='person-img' src={testimonial.photo} />
                 <div className='person-desc'>

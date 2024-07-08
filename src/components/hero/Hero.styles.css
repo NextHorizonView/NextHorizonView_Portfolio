@@ -72,10 +72,10 @@
 
 .spotlight {
     position: absolute;
-    top: -500px;
+    top: -600px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1000px;
+    width: 1200px;
     height: 1000px;
     background-image: radial-gradient(farthest-side, #383F79, transparent);
 }
