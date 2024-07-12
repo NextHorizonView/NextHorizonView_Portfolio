@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import Logo from '../../assets/logo.png'
 import './Navigation.styles.css'
+import Cursor from 'react-cursor-follow'
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ const Navigation = () => {
                 <Link className='nav-link sm-nav-link' to='/contact'>Contact</Link>
             </div>
             <Outlet />
+            <Cursor color={'#fff'} size={10} />
         </Fragment>
     )
 }
