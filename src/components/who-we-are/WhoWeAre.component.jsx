@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 
 const spring = {
     type: "spring",
-    // stiffness: 100,
-    // damping: 20
 };
 
 const containerVariants = {
@@ -14,7 +12,10 @@ const containerVariants = {
 };
 
 const btnVariants = {
-    initial: { x: 0 },
+    initial: {
+        x: 0,
+        transition: spring
+    },
     hover: {
         x: 40,
         transition: spring
@@ -22,7 +23,10 @@ const btnVariants = {
 };
 
 const arrowVariants = {
-    initial: { x: 0 },
+    initial: {
+        x: 0,
+        transition: spring
+    },
     hover: {
         x: -150,
         transition: spring

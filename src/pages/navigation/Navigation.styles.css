@@ -94,3 +94,9 @@
         transform: translateX(-50%);
     }
 }
+
+@media(max-width: 540px) {
+    .cursor {
+        display: none;
+    }
+}

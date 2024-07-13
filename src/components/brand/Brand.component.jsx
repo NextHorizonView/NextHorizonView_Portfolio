@@ -1,8 +1,5 @@
 import React from 'react'
 import './Brand.styles.css'
-import brandImg from '../../assets/brand-banner.png'
-import brandText1 from '../../assets/horizonView-1.png'
-import brandText2 from '../../assets/horizonView-2.png'
 import Sp1 from '../../assets/sp1.png'
 import Sp2 from '../../assets/sp2.png'
 import Sp3 from '../../assets/sp3.png'

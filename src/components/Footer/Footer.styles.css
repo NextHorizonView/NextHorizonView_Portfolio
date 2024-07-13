@@ -1,12 +1,12 @@
 .footer-section {
-    margin-top: 200px;
+    margin-top: 80px;
     display: flex;
     justify-content: center;
 }
 
 .footer-container{
-    width: 80%;
     max-width: 1600px;
+    width: 80%;
     position: relative;
     overflow: hidden;
     padding: 50px 50px 300px 50px;
