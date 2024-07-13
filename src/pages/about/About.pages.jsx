@@ -8,17 +8,16 @@ import portraitImg from '../../assets/portrait.png'
 import BookCall from '../../components/book-call/BookCall.component';
 import Header from '../../components/home-section-header/Header.component';
 import Footer from '../../components/Footer/Footer.component';
+import Banner from '../../components/Banner/Banner.component';
 
 const About = () => {
     return (
         <div className='about-page'>
             <div className='about-content'>
-                <section className='about-banner'>
-                    <div className='about-banner-content'>
-                        <h1 className='about-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</h1>
-                        <p>Crafting Exceptional Web Designs and Branding Solutions: Experience-Driven, Relationship-Focused</p>
-                    </div>
-                </section>
+                <Banner>
+                    <h1 className='banner-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</h1>
+                    <p>Crafting Exceptional Web Designs and Branding Solutions: Experience-Driven, Relationship-Focused</p>
+                </Banner>
 
                 <section className='about-values'>
                     <div className='about-values-content'>
@@ -177,7 +176,7 @@ const AccordianItem = ({ title, content, last }) => {
         <div className={`accordian-item ${last ? 'last-accordian' : ''}`} onClick={() => setIsOpen(!isOpen)}>
             <div className='accordian-question'>
                 <p>{title}</p>
-                <FontAwesomeIcon icon={faXmark} className={!isOpen ? 'acc-icon ' : 'acc-icon rotate'} />
+                <FontAwesomeIcon icon={faXmark} className={isOpen ? 'acc-icon ' : 'acc-icon rotate'} />
             </div>
             <div className={`${!isOpen ? 'accordian-content' : 'accordian-content accordian-content-show'}`}>
                 <div className='accordian-content-text'>{content}</div>

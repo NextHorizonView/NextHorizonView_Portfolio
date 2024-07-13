@@ -8,37 +8,9 @@
     align-items: center;
 }
 
-.about-banner {
-    max-width: 1600px;
-    width: 80%;
-    height: min-content;
-    min-height: 500px;
-    background-color: #080a1a;
-    border-radius: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-banner-content {
-    display: flex;
-    flex-direction: column;
-    max-width: 75%;
-}
-
 .about-header {
-    font-size: 58px;
+    font-size: 48px;
     margin: 0;
-}
-
-.about-banner-content span {
-    font-weight: 400;
-}
-
-.about-banner-content p {
-    font-size: 24px;
-    margin: 0;
-    text-align: center;
 }
 
 .about-values {
@@ -55,6 +27,10 @@
     flex-direction: column;
     align-items: start;
     gap: 60px;
+}
+
+.about-values-content h1 {
+    margin: 0;
 }
 
 .about-values-row {
