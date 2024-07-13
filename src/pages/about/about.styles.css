@@ -1,5 +1,5 @@
 .about-page {
-    padding: 180px 0;
+    padding-top: 180px;
 }
 
 .about-content {
@@ -26,7 +26,7 @@
     max-width: 75%;
 }
 
-.about-banner-content h1 {
+.about-header {
     font-size: 58px;
     margin: 0;
 }
@@ -39,4 +39,371 @@
     font-size: 24px;
     margin: 0;
     text-align: center;
+}
+
+.about-values {
+    padding: 30px;
+    background: linear-gradient(#3d49bc, #96a0ff);
+    width: 80%;
+    max-width: 1600px;
+    margin-top: 60px;
+    border-radius: 26px;
+}
+
+.about-values-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 60px;
+}
+
+.about-values-row {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about-values-row-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-values-row-item h2{
+    font-size: 32px;
+}
+
+.about-values-row-item p{
+    font-size: 24px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.about-awards {
+    max-width: 1600px;
+    width: 80%;
+    margin-top: 80px;
+}
+
+.about-awards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+}
+
+.about-awards-header-container {
+    margin-right: 32px;
+    width: 50%;
+}
+
+.about-awards-header-container h1 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    width: 100%;
+}
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center; 
+}
+
+.separator {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding: 24px 0 20px 0;
+}
+
+.item {
+    padding: 10px; /* Add padding if needed */
+}
+
+.first {
+    justify-self: start;
+}
+
+.middle {
+    justify-self: center;
+}
+
+.last {
+    justify-self: end;
+}
+
+.about-grid h3 {
+    font-size: 22px;
+}
+
+.about-grid p {
+    font-size: 22px;
+}
+
+
+.about-statistic {
+    margin-top: 80px;
+    width: 80%;
+    margin-top: 80px;
+    max-width: 1600px;
+}
+
+
+.about-statistic-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-statistic-card-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.statistic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 270px;
+    background-color: #0a0a0a;
+    border-radius: 20px;
+    align-items: start;
+}
+
+.statistic-card h1 {
+    margin: 0;
+}
+
+.statistic-card P {
+    color: rgb(168, 168, 168);
+    font-size: 24px;
+}
+
+.about-expert {
+    margin-top: 80px;
+    width: 80%;
+    margin-top: 80px;
+    max-width: 1600px;
+}
+
+.about-expert-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+
+.about-expert-container h1 {
+    text-align: left;
+}
+
+.expert-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.expert-card-img-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px 0 20px;
+    height: 350px;
+    width: 100%;
+}
+
+.expert-card h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.expert-card img {
+    max-width: 350px;
+    width: 100%;
+}
+
+.have-questions {
+    margin-top: 80px;
+    width: 80%;
+    max-width: 1600px;
+}
+
+.have-questions h1 {
+    text-align: left;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.have-questions-container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.have-questions-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.accordian-item {
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 20px 0;
+}
+
+.accordian-item p {
+    font-size: 19px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.accordian-question {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 40px;
+}
+
+.accordian-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    margin-right: 60px;
+}
+
+.accordian-content-text {
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.last-accordian {
+    border: 0;
+}
+
+.accordian-content-show {
+    grid-template-rows: 1fr;
+}
+
+.acc-icon {
+    font-size: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(45deg);
+
+}
+
+@media(max-width: 1200px) {
+    .about-header {
+        font-size: 48px;
+    }
+
+    .about-banner-content p {
+        font-size: 22px;
+    }
+    .about-statistic-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .statistic-card {
+        height: 250px;
+    }
+    .expert-card-img-container {
+        height: 300px;
+    }
+}
+
+@media(max-width: 1040px) {
+    .about-header {
+        font-size: 42px;
+    }
+    .about-banner-content p {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 900px) {
+    .about-header {
+        font-size: 32px;
+    }
+    .about-banner-content p {
+        font-size: 18px;
+    }
+    .about-page {
+        padding-top: 100px;
+    }
+
+    .about-values-row {
+        flex-direction: column;
+    }
+    .about-awards-container {
+        flex-direction: column;
+    }
+    .about-statistic-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .statistic-card {
+        height: 240px;
+    }
+    .expert-card-container {
+        grid-template-columns: 1fr;
+    }
+    .have-questions-container {
+        flex-direction: column;
+        gap: 40px;
+     }
+}
+
+@media(max-width: 540px) {
+    .about-header {
+        font-size: 24px;
+    }
+    .about-banner-content p {
+        font-size: 16px;
+    }
+
+    .about-grid h3 {
+        font-size: 18px;
+    }
+    
+    .about-grid p {
+        font-size: 18px;
+    }
+    .about-statistic-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .statistic-card {
+        height: 200px;
+    }
+
+    .expert-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 }

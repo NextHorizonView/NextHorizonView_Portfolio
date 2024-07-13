@@ -11,6 +11,7 @@ import ContactUsForm from '../../components/contact-us-form/ContactUsForm.compon
 import Footer from '../../components/Footer/Footer.component';
 import WhoWeAre from '../../components/who-we-are/WhoWeAre.component';
 import LoveUs from '../../components/love-us/LoveUs.component';
+import BookCall from '../../components/book-call/BookCall.component';
 
 const Home = () => {
     return (
@@ -29,17 +30,12 @@ const Home = () => {
                 </div>
             </section>
             <Testimonial />
-            <section className='ready-to-scale-section'>
-                <div className='ready-to-scale'>
-                    <div className='ready-to-scale-content'>
-                        <Header>Ready to scale your brand to <span className='italic'>new heights?</span></Header>
-                        <p>If you want to achieve ground-breaking growth with increased sales and profitability with paid ads, then you're in the right place.</p>
-                        <div className='hero-btn hero-btn-primary'>
-                            <p className='hero-btn-text'>Book a call</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div className='book-call'>
+                <BookCall>
+                    <Header>Ready to scale your brand to <span className='italic'>new heights?</span></Header>
+                    <p>If you want to achieve ground-breaking growth with increased sales and profitability with paid ads, then you're in the right place.</p>
+                </BookCall>
+            </div>
             <ContactUsForm />
             <Footer />
         </div>

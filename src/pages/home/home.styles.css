@@ -37,44 +37,9 @@ h1 {
     border-radius: 27px;
 }
 
-.book-call-btn-wrapper {
-    display: flex;
-    cursor: pointer;
-    /* position: relative; */
-    width: 285px;
-}
-
-.book-call-btn {
-    background-color: #ffffff;
-    width: 220px;
-    height: 60px;
-    color: black;
+.book-call {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    transition: all 200ms ease-out;
-}
-
-.book-call-btn-arr {
-    background-color: #ffffff;
-    width: 65px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    margin-left: 2px;
-    transition: all 200ms ease-out;
-}
-
-.book-call-btn-wrapper:hover {
-    .book-call-btn-arr {
-        transform: translateX(-220px);
-    }
-    .book-call-btn {
-        transform: translateX(65px);
-    }
 }
 
 .services-section {
@@ -101,36 +66,6 @@ h1 {
     background-image: radial-gradient(farthest-side, #383F79, transparent);
 }
 
-.ready-to-scale {
-    background: url(../../assets/scale.png);
-    padding: 100px 0;
-    margin: 150px 0;
-    width: 80%;
-    max-width: 1600px;
-    min-height: 600px;
-    border-radius: 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.ready-to-scale-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.ready-to-scale-content {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-}
 
 @media(max-width: 1920px) {
     .who-we-are-frame {
@@ -162,9 +97,7 @@ h1 {
     h1 {
         font-size: 48px;
     } 
-    .italic {
-        font-size: 48px;
-    }
+    
     .who-we-are-frame {
         padding: 40px 40px;
         background-image: url(../../assets/who-we-are-frame-sm.png);
@@ -184,10 +117,7 @@ h1 {
     h1 {
         font-size: 28px;
     } 
-    .italic {
-        font-size: 28px;
-    }
-
+    
     .sponsor-banner {
         width: 90vw;
     }
@@ -210,9 +140,5 @@ h1 {
 
     .service-card-container {
         width: 90vw;
-    }
-
-    .ready-to-scale {
-        padding: 0 0;
     }
 }
