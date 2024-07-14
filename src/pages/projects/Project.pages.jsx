@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './project.styles.css';
 import Banner from '../../components/Banner/Banner.component';
 import Header from '../../components/home-section-header/Header.component';
@@ -8,8 +8,20 @@ import ProjectImg1 from '../../assets/projects1.png'
 import ProjectImg2 from '../../assets/projects2.png'
 import ProjectImg3 from '../../assets/projects3.png'
 import ProjectImg4 from '../../assets/projects4.png'
+import { getProjects } from '../../../utils/sanity.utils';
 
 const Project = () => {
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const projects = await getProjects();
+            setProjects(projects)
+        }
+        fetchData();
+    }
+        , [])
+
     return (
         <div className='project-page'>
             <div className='project-content'>
@@ -25,11 +37,9 @@ const Project = () => {
                         </div>
                         <div className='projects-content-container'>
                             <p className='project-content-header'>Award winning designs for clients and world class startups.</p>
-                            <ProjectItem img={ProjectImg1} name='City 2 Guide' year={2024} genre='Traveling website' />
-                            <ProjectItem img={ProjectImg2} name='City 2 Guide' year={2024} genre='Traveling website' />
-                            <ProjectItem img={ProjectImg3} name='City 2 Guide' year={2024} genre='Traveling website' />
-                            <ProjectItem img={ProjectImg4} name='City 2 Guide' year={2024} genre='Traveling website' />
-
+                            {projects.map((project, index) => (
+                                <ProjectItem key={index} img={project.image} name={project.name} year={project.year} genre={project.genre} />
+                            ))}
                         </div>
                     </div>
                 </section>

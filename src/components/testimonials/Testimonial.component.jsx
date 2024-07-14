@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Testimonial.styles.css'
 import Header from '../home-section-header/Header.component';
 import TestimonialCard from '../testimonial-card/TestimonialCard.component';
 import photo from '../../assets/testimonialImg.png'
+import { getTestimonials } from '../../../utils/sanity.utils';
 
 const testimonialData = [
     {
@@ -36,12 +37,22 @@ const testimonialData = [
 ]
 
 const Testimonial = () => {
+    const [testimonials, setTestimonials] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const testimonials = await getTestimonials();
+            setTestimonials(testimonials)
+        }
+        fetchData();
+    }, [])
+
     return (
         <section className='testimonial-section'>
             <div className='section-btn'>Testimonials</div>
             <Header>Result speak for <span className='italic'>themselves</span></Header>
             <div className='testimonials-container'>
-                {testimonialData.map((testimonial, id) => <TestimonialCard testimonial={testimonial} key={id} />)}
+                {testimonials.map((testimonial, id) => <TestimonialCard testimonial={testimonial} key={id} />)}
             </div>
         </section>
     )

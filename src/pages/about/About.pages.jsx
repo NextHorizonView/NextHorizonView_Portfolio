@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './about.styles.css';
 import Button from '../../components/button/Button.component';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,8 +9,20 @@ import BookCall from '../../components/book-call/BookCall.component';
 import Header from '../../components/home-section-header/Header.component';
 import Footer from '../../components/Footer/Footer.component';
 import Banner from '../../components/Banner/Banner.component';
+import { getTeamData } from '../../../utils/sanity.utils';
 
 const About = () => {
+
+    const [team, setTeam] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const team = await getTeamData();
+            setTeam(team)
+        }
+        fetchData();
+    }, []);
+
     return (
         <div className='about-page'>
             <div className='about-content'>
@@ -112,12 +124,7 @@ const About = () => {
                     <div className='about-expert-container'>
                         <h1>Meet the expert:</h1>
                         <div className='expert-card-container'>
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
-                            <ExpertCard img={portraitImg} name='Jane Doe' />
+                            {team.map((expert, index) => <ExpertCard img={expert.image} name={expert.name} key={index} />)}
                         </div>
                     </div>
                 </section>
