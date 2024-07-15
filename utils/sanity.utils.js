@@ -36,3 +36,14 @@ export async function getTeamData() {
 
     return await client.fetch(query);
 }
+
+export async function getRecentProjects() {
+    const query = `*[_type == "project"] | order(_createdAt desc)[0..3] {
+        name,
+        year,
+        genre,
+        'image': image.asset->url
+    }`;
+
+    return await client.fetch(query);
+}

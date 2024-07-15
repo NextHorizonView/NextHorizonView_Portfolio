@@ -67,8 +67,13 @@
 .brand-video-container {
     display: flex;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1600px;
     padding: 0 60px;
+    border-radius: 26px;
+}
+
+.video-player {
+    border-radius: 26px;
 }
 
 @keyframes scroll {

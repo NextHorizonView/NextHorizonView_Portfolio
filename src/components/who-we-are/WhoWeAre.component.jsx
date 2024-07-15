@@ -33,13 +33,19 @@ const arrowVariants = {
     }
 };
 
+{/*
+
+translateX(0px) translateY(0px) scale(0.75) rotate(0deg) rotateX(50deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)
+
+*/ }
+
 const WhoWeAre = () => {
     return (
         <section className='who-we-are-section'>
             <div className='who-we-are-wrapper'>
                 <div className='project-btn'>About Us</div>
                 <h1>Who <span className='italic'>we</span> are?</h1>
-                <div className='who-we-are-frame'>
+                <motion.div transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ margin: '-200px', once: true }} className='who-we-are-frame'>
                     <p className='header'>Introduction</p>
                     <p className='who-we-are-para'>At the forefront of design innovation, our
                         agency harnesses digital creativity to help
@@ -64,7 +70,7 @@ const WhoWeAre = () => {
                         </motion.div>
                     </motion.div>
 
-                </div>
+                </motion.div>
             </div>
         </section>
     )

@@ -2,19 +2,14 @@ import React, { Fragment, useEffect, useRef, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import Logo from '../../assets/logo.png'
 import './Navigation.styles.css'
-import Cursor from 'react-cursor-follow'
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import Cursor from '../../components/Cursor/Cursor.component'
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const lenis = useLenis(({ scroll }) => {
-        // called every scroll
-    }
-    )
 
     return (
-        <ReactLenis root>
+        <>
             <div className='nav-container' style={{ backgroundColor: isMenuOpen && '#121212', zIndex: 999 }}>
                 <Link to='/' className='nav-logo'>
                     <img className='nav-logo' src={Logo} alt='company-logo' />
@@ -38,9 +33,9 @@ const Navigation = () => {
             </div>
             <Outlet />
             <div className='cursor'>
-                {/* <Cursor color={'#fff'} size={10} /> */}
+                <Cursor />
             </div>
-        </ReactLenis>
+        </>
     )
 }
 
