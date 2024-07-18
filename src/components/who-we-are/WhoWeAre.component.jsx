@@ -2,6 +2,7 @@ import React from 'react'
 import './WhoWeAre.styles.css'
 import rightArrow from '../../assets/right-arrow.png'
 import { motion } from 'framer-motion'
+import { InlineWidget, PopupButton } from 'react-calendly'
 
 const spring = {
     type: "spring",
@@ -28,16 +29,10 @@ const arrowVariants = {
         transition: spring
     },
     hover: {
-        x: -150,
+        x: -155,
         transition: spring
     }
 };
-
-{/*
-
-translateX(0px) translateY(0px) scale(0.75) rotate(0deg) rotateX(50deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)
-
-*/ }
 
 const WhoWeAre = () => {
     return (
@@ -60,7 +55,12 @@ const WhoWeAre = () => {
                             className='book-call-btn'
                             variants={btnVariants}
                         >
-                            Book a 15min call
+                            Book a call
+                            <PopupButton
+                                url="https://calendly.com/nexthorizonview/30min"
+                                rootElement={document.getElementById("root")}
+
+                            />
                         </motion.div>
                         <motion.div
                             className='book-call-btn-arr'

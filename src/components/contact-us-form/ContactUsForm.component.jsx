@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './ContactUsForm.styles.css'
 import Header from '../home-section-header/Header.component'
 import InstImg from '../../assets/insta.png'
@@ -6,11 +6,29 @@ import LinkedIn from '../../assets/linkedin.png'
 import TwitterImg from '../../assets/twitter.png'
 import FormInput from '../FormInput/FormInput.component'
 import Button from '../button/Button.component'
+import emailjs from '@emailjs/browser'
 
 const ContactUsForm = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const form = useRef();
 
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_fu2t0or', 'template_ty9wa8s', form.current, {
+                publicKey: 'xc4inZweR4qR95-7U',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
 
     return (
         <section className='contact-us-form-section'>
@@ -43,16 +61,16 @@ const ContactUsForm = () => {
                     </div>
                 </div>
                 <div className='flex-item flex-item-2'>
-                    <form className=''>
+                    <form ref={form} className='' onSubmit={sendEmail}>
                         <div className='basic-detail'>
-                            <FormInput name='Name' placeholder='Enter your name' state={name} setState={setName} type='text' />
-                            <FormInput name='Email' placeholder='Enter your email' state={email} setState={setEmail} type='email' />
+                            <FormInput text='Name' name='from_name' placeholder='Enter your name' state={name} setState={setName} type='text' />
+                            <FormInput text='Email' name='from_email' placeholder='Enter your email' state={email} setState={setEmail} type='email' />
                         </div>
                         <div className=''>
                             <p className='form-name'>Message</p>
                             <textarea placeholder='Enter your message here' name='message' id='message'></textarea>
                         </div>
-                        <Button>Send Message</Button>
+                        <Button type='submit'>Send Message</Button>
                     </form>
                 </div>
             </div>

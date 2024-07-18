@@ -36,45 +36,7 @@
     justify-content: space-between;
 }
 
-.book-call-btn-wrapper {
-    display: flex;
-    cursor: pointer;
-    /* position: relative; */
-    width: 285px;
-}
 
-.book-call-btn {
-    background-color: #ffffff;
-    width: 220px;
-    height: 60px;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    transition: all 200ms ease-out;
-}
-
-.book-call-btn-arr {
-    background-color: #ffffff;
-    width: 65px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 18px;
-    margin-left: 2px;
-    transition: all 200ms ease-out;
-}
-
-.book-call-btn-wrapper:hover {
-    .book-call-btn-arr {
-        transform: translateX(-220px);
-    }
-    .book-call-btn {
-        transform: translateX(65px);
-    }
-}
 
 
 

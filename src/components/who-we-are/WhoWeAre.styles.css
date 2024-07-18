@@ -42,7 +42,6 @@
 .book-call-btn-wrapper {
     display: flex;
     cursor: pointer;
-    width: 285px;
     margin-top: 40px;
 }
 
@@ -75,6 +74,24 @@
     .book-call-btn {
         transform: translateX(65px);
     }
+}
+
+.book-call-btn-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.book-call-btn button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    z-index: 9999;
+    cursor: pointer;
 }
 
 @media(max-width: 1920px) {
