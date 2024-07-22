@@ -38,6 +38,7 @@
 .project-content-item {
     margin-top: 60px;
     width: 100%;
+    color: white;
 }
 
 .project-content-item:hover {

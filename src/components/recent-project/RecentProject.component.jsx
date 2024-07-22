@@ -34,14 +34,14 @@ const RecentProject = () => {
           >
             Recent Projects
           </motion.h2>
-          {recentProjects[0] && <ProjectItem img={recentProjects[0].image} name={recentProjects[0].name} year={recentProjects[0].year} industry={recentProjects[0].industry} />}
+          {recentProjects[0] && <ProjectItem id={recentProjects[0].id} img={recentProjects[0].image} name={recentProjects[0].name} year={recentProjects[0].year} industry={recentProjects[0].industry} />}
 
-          {recentProjects[1] && <ProjectItem img={recentProjects[1].image} name={recentProjects[1].name} year={recentProjects[1].year} industry={recentProjects[1].industry} />}
+          {recentProjects[1] && <ProjectItem id={recentProjects[1].id} img={recentProjects[1].image} name={recentProjects[1].name} year={recentProjects[1].year} industry={recentProjects[1].industry} />}
         </div>
         <div className='recent-projrct-item'>
-          {recentProjects[2] && <ProjectItem img={recentProjects[2].image} name={recentProjects[2].name} year={recentProjects[2].year} industry={recentProjects[2].industry} />}
+          {recentProjects[2] && <ProjectItem id={recentProjects[2].id} img={recentProjects[2].image} name={recentProjects[2].name} year={recentProjects[2].year} industry={recentProjects[2].industry} />}
 
-          {recentProjects[3] && <ProjectItem img={recentProjects[3].image} name={recentProjects[3].name} year={recentProjects[3].year} industry={recentProjects[3].industry} />}
+          {recentProjects[3] && <ProjectItem id={recentProjects[3].id} img={recentProjects[3].image} name={recentProjects[3].name} year={recentProjects[3].year} industry={recentProjects[3].industry} />}
         </div>
       </div>
     </section>
@@ -50,7 +50,7 @@ const RecentProject = () => {
 
 export default RecentProject;
 
-const ProjectItem = ({ img, name, year, industry }) => {
+const ProjectItem = ({ img, name, year, industry, id }) => {
   const { setIsHovered } = useHover();
   const projectItemRef = useRef(null);
 
@@ -90,20 +90,22 @@ const ProjectItem = ({ img, name, year, industry }) => {
   }, [setIsHovered]);
 
   return (
-    <motion.div
-      ref={projectItemRef}
-      initial={{ opacity: 0, scale: 0.2 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ margin: '-200px', once: true }}
-      onMouseOut={handleMouseLeave}
-      onMouseOver={handleMouseEnter}
-      onClick={() => console.log('clicked')}
-    >
-      <div className='project-card'>
-        <img src={img} alt='project1' className='project-img' />
-        <h3>{name}</h3>
-        <p className='project-item-text'>{year}<span />{industry}</p>
-      </div>
-    </motion.div>
+    <a href={`/projects/${id}`}>
+      <motion.div
+        ref={projectItemRef}
+        initial={{ opacity: 0, scale: 0.2 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ margin: '-200px', once: true }}
+        onMouseOut={handleMouseLeave}
+        onMouseOver={handleMouseEnter}
+        onClick={() => console.log('clicked')}
+      >
+        <div className='project-card'>
+          <img src={img} alt='project1' className='project-img' />
+          <h3>{name}</h3>
+          <p className='project-item-text'>{year}<span />{industry}</p>
+        </div>
+      </motion.div>
+    </a>
   );
 };
