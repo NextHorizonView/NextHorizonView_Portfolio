@@ -38,10 +38,11 @@ const Cursor = () => {
 
     return (
         <animated.div
-            className={`custom-cursor ${isHovered ? 'cursor-hover' : ''}`}
+            className={`custom-cursor ${isHovered === 'project' && 'project-hover'}  ${isHovered === 'person' && 'person-hover'} `}
             style={springProps}
         >
-            {isHovered && <img className='cursor-img' src={arrowImg} alt='arrow' />}
+            {isHovered === 'project' && <img className='cursor-img' src={arrowImg} alt='arrow' />}
+            {isHovered === 'person' && <p>View LinkedIn</p>}
         </animated.div>
     );
 };

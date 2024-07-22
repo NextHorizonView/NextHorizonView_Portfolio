@@ -9,9 +9,19 @@
     transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
   }
   
-.cursor-hover {
+.project-hover {
   width: 30px;
   height: 30px;
+}
+
+.person-hover {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 12px;
 }
 
 .cursor-hover img {

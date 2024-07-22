@@ -32,7 +32,8 @@ export async function getTestimonials() {
 export async function getTeamData() {
     const query = `*[_type == "team"]{
         name,
-        'image': image.asset->url
+        'image': image.asset->url,
+        linkedIn,
     }`;
 
     return await client.fetch(query);

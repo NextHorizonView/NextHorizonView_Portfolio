@@ -56,38 +56,12 @@ const ProjectItem = ({ img, name, year, industry, id }) => {
 
   const handleMouseEnter = () => {
     console.log('hovered');
-    setIsHovered(true);
+    setIsHovered('project');
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && entry.target.contains(document.querySelector('.custom-cursor'))) {
-          setIsHovered(true);
-        } else if (!entry.isIntersecting && entry.target.contains(document.querySelector('.custom-cursor'))) {
-          setIsHovered(false);
-        }
-      },
-      {
-        root: null,
-        threshold: 0.1,
-      }
-    );
-
-    if (projectItemRef.current) {
-      observer.observe(projectItemRef.current);
-    }
-
-    return () => {
-      if (projectItemRef.current) {
-        observer.unobserve(projectItemRef.current);
-      }
-    };
-  }, [setIsHovered]);
 
   return (
     <a href={`/projects/${id}`}>

@@ -11,8 +11,9 @@ import Footer from '../../components/Footer/Footer.component';
 import Banner from '../../components/Banner/Banner.component';
 import { getTeamData } from '../../utils/sanity.utils';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ArrowButton from '../../components/arrow-button/ArrowButton.component';
+import { useHover } from '../../contexts/Cursor.context';
 
 const About = () => {
     const navigate = useNavigate();
@@ -192,7 +193,7 @@ const About = () => {
                     <div className='about-expert-container'>
                         <h1>Meet the expert:</h1>
                         <div className='expert-card-container'>
-                            {team.map((expert, index) => <ExpertCard img={expert.image} name={expert.name} key={index} />)}
+                            {team.map((expert, index) => <ExpertCard linkedIn={expert.linkedIn} img={expert.image} name={expert.name} key={index} />)}
                         </div>
                     </div>
                 </section>
@@ -240,14 +241,30 @@ const StatisticCard = ({ text1, text2 }) => (
     </motion.div>
 )
 
-const ExpertCard = ({ img, name }) => (
-    <div className='expert-card'>
-        <div className='expert-card-img-container'>
-            <img src={img} />
-        </div>
-        <h2>{name}</h2>
-    </div>
-)
+const ExpertCard = ({ img, name, linkedIn }) => {
+    const { setIsHovered } = useHover();
+    const handleMouseEnter = () => {
+        console.log('hovered');
+        setIsHovered('person');
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    console.log(linkedIn);
+
+    return (
+        <Link to={linkedIn}>
+            <div className='expert-card' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                <div className='expert-card-img-container'>
+                    <img src={img} />
+                </div>
+                <h2>{name}</h2>
+            </div>
+        </Link>
+    )
+}
 
 const AccordianItem = ({ title, content, last }) => {
     const [isOpen, setIsOpen] = useState(false);
