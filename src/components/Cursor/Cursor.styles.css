@@ -7,6 +7,9 @@
     pointer-events: none;
     z-index: 9999;
     transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+    display: flex;
+  justify-content: center;
+  align-items: center;
   }
   
 .project-hover {
@@ -17,9 +20,6 @@
 .person-hover {
   width: 100px;
   height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: black;
   font-size: 12px;
 }
@@ -29,4 +29,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.cursor-img {
+  width: 32px;
+  height: 32px;
 }
