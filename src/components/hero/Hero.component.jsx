@@ -1,7 +1,14 @@
 import React from 'react'
 import './Hero.styles.css'
+import { PopupButton } from 'react-calendly'
 
 const Hero = () => {
+
+    const scrollToContact = () => {
+        const contactForm = document.getElementById('contact-form')
+        contactForm.scrollIntoView()
+    }
+
     return (
         <section className='hero-section'>
             <div className='spotlight' />
@@ -11,11 +18,10 @@ const Hero = () => {
                 <p className='hero-text'>Empowering startups with award-winning design solutions to
                     stand out in the market and thrive.</p>
 
-                <div className='hero-btn-container'>
+                <div className='hero-btn-container' onClick={scrollToContact}>
                     <div className='hero-btn hero-btn-primary'>
                         <p className='hero-btn-text'>Contact us</p>
                     </div>
-                    <div className='hero-btn hero-btn-secondary'>Book a call</div>
                 </div>
             </div>
         </section>

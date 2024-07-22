@@ -7,7 +7,6 @@ import Cursor from '../../components/Cursor/Cursor.component'
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
     return (
         <>
             <div className='nav-container' style={{ backgroundColor: isMenuOpen && '#121212', zIndex: 999 }}>

@@ -31,7 +31,7 @@ const ContactUsForm = () => {
     };
 
     return (
-        <section className='contact-us-form-section'>
+        <section className='contact-us-form-section' id='contact-form'>
             <div className='project-btn'>Contact Us</div>
             <Header>Reach out to <span className='italic'>us</span></Header>
             <div className='contact-us-form'>

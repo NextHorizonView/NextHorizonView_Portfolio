@@ -37,17 +37,17 @@ const Contact = () => {
             <h2>Reach out Directly</h2>
             <div className='address-info'>
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px', opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true, margin: '-100px' }} className='address-info-item'>
-                <img src={locImg} />
+                <img src={locImg} className='address-icon' />
                 <h3>1234 Street Name, City Name, United States</h3>
               </motion.div>
               <hr />
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px' }} whileInView={{ translateX: 0 }} viewport={{ once: true, margin: '-100px' }} className='address-info-item'>
-                <img src={phoneImg} />
+                <img src={phoneImg} className='address-icon' />
                 <h3>+1 234 567 890</h3>
               </motion.div>
               <hr />
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px' }} whileInView={{ translateX: 0 }} viewport={{ once: true, margin: '-100px' }} className='address-info-item'>
-                <img src={messageImg} />
+                <img src={messageImg} className='address-icon' />
                 <h3>Personal@gmail.com</h3>
               </motion.div>
             </div>

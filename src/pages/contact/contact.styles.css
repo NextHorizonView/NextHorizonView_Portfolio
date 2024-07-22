@@ -55,6 +55,11 @@
     height: 12px;
 }
 
+.address-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .contact-form {
     display: flex;
     gap: 60px;

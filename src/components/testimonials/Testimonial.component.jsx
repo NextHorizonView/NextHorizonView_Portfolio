@@ -3,7 +3,7 @@ import './Testimonial.styles.css'
 import Header from '../home-section-header/Header.component';
 import TestimonialCard from '../testimonial-card/TestimonialCard.component';
 import photo from '../../assets/testimonialImg.png'
-import { getTestimonials } from '../../../utils/sanity.utils';
+import { getTestimonials } from '../../utils/sanity.utils';
 
 const testimonialData = [
     {

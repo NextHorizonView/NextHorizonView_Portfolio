@@ -9,7 +9,7 @@ import BookCall from '../../components/book-call/BookCall.component';
 import Header from '../../components/home-section-header/Header.component';
 import Footer from '../../components/Footer/Footer.component';
 import Banner from '../../components/Banner/Banner.component';
-import { getTeamData } from '../../../utils/sanity.utils';
+import { getTeamData } from '../../utils/sanity.utils';
 
 const About = () => {
 
