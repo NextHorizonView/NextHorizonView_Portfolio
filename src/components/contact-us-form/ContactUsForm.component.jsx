@@ -9,12 +9,16 @@ import Button from '../button/Button.component'
 import emailjs from '@emailjs/browser'
 
 const ContactUsForm = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [messageSent, setMessageSent] = useState(false);
+    const [messageSuccess, setMessageSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
     const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         emailjs
             .sendForm('service_fu2t0or', 'template_ty9wa8s', form.current, {
@@ -23,9 +27,15 @@ const ContactUsForm = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    setLoading(false);
+                    setMessageSuccess(true);
+                    setMessageSent(true);
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
+                    setMessageSent(true);
+                    setLoading(false);
+                    setMessageSuccess(false);
                 },
             );
     };
@@ -70,7 +80,12 @@ const ContactUsForm = () => {
                             <p className='form-name'>Message</p>
                             <textarea placeholder='Enter your message here' name='message' id='message'></textarea>
                         </div>
-                        <Button type='submit'>Send Message</Button>
+                        {
+                            !messageSent && !loading && !messageSuccess ? <Button type='submit'>Send Message</Button> :
+                                loading ? <p className='loading-message'>Sending....</p> :
+                                    messageSuccess ? <p className='success-message'>Your message is sent successfully</p> : <p className='fail-message'>Your message could not be sent. Please try again later.</p>
+                        }
+
                     </form>
                 </div>
             </div>

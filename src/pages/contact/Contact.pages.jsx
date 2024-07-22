@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './contact.styles.css';
 import buttonImg from '../../assets/clean.png'
 import locImg from '../../assets/location.png'
@@ -8,11 +8,42 @@ import FormInput from '../../components/FormInput/FormInput.component';
 import Button from '../../components/button/Button.component';
 import Footer from '../../components/Footer/Footer.component'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [messageSent, setMessageSent] = useState(false);
+  const [messageSuccess, setMessageSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .sendForm('service_fu2t0or', 'template_ty9wa8s', form.current, {
+        publicKey: 'xc4inZweR4qR95-7U',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          setLoading(false);
+          setMessageSuccess(true);
+          setMessageSent(true);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setMessageSent(true);
+          setLoading(false);
+          setMessageSuccess(false);
+        },
+      );
+  };
+
 
   return (
     <div className='contact-page'>
@@ -27,11 +58,17 @@ const Contact = () => {
         <div className='contact-form'>
           <div className='form-container'>
             <h2>Complete the form, we'll reach out soon.</h2>
-            <FormInput name='Name' placeholder='Enter your name' state={name} setState={setName} type='text' />
-            <FormInput name='Email' placeholder='Enter your email' state={email} setState={setEmail} type='email' />
-            <p className='form-name'>Message</p>
-            <textarea name='Message' placeholder='Enter your message' value={message} onChange={(e) => setMessage(e.target.value)} type='text' />
-            <Button>Send Message</Button>
+            <form ref={form} className='' onSubmit={sendEmail}>
+              <FormInput name='Name' placeholder='Enter your name' state={name} setState={setName} type='text' />
+              <FormInput name='Email' placeholder='Enter your email' state={email} setState={setEmail} type='email' />
+              <p className='form-name'>Message</p>
+              <textarea required name='Message' placeholder='Enter your message' value={message} onChange={(e) => setMessage(e.target.value)} type='text' />
+              {
+                !messageSent && !loading && !messageSuccess ? <Button type='submit'>Send Message</Button> :
+                  loading ? <p className='loading-message'>Sending....</p> :
+                    messageSuccess ? <p className='success-message'>Your message is sent successfully</p> : <p className='fail-message'>Your message could not be sent. Please try again later.</p>
+              }
+            </form>
           </div>
           <div className='address-info-container'>
             <h2>Reach out Directly</h2>
