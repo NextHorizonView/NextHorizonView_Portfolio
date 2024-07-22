@@ -1,7 +1,7 @@
 import './BookCall.styles.css'
-import Header from '../home-section-header/Header.component'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PopupButton } from 'react-calendly'
 
 const BookCall = ({ children }) => {
     return (
@@ -16,7 +16,14 @@ const BookCall = ({ children }) => {
                     <div className='ready-to-scale-content'>
                         {children}
                         <div className='hero-btn hero-btn-primary'>
-                            <p className='hero-btn-text'>Book a call</p>
+                            <div className='book-a-call-btn'>
+                                Book a call
+                                <PopupButton
+                                    url="https://calendly.com/nexthorizonview/30min"
+                                    rootElement={document.getElementById("root")}
+
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -7,14 +7,37 @@ import Header from '../../components/home-section-header/Header.component';
 import serviceItemImg from '../../assets/service.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import ArrowButton from '../../components/arrow-button/ArrowButton.component';
 
 const Services = () => {
+    const navigate = useNavigate();
     return (
         <div className='service-page'>
             <div className='service-content'>
                 <Banner>
-                    <h1 className='banner-header'>Elevating Sales Through <span className='italic'>Innovative</span> Quality Designs</h1>
-                    <p>A top-tier Branding Service, renowned for expertise, dedicated to Cultivating Connections</p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: '-200px', once: true }}
+                        transition={{ duration: 0.3 }}
+                        className='banner-header'>Elevating Sales Through <span className='italic'>Innovative</span> Quality Designs</motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >A top-tier Branding Service, renowned for expertise, dedicated to Cultivating Connections</motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: '-100px', once: true }}
+                        transition={{ duration: 0.3 }}
+                        className='banner-btn'
+                    >
+                        <ArrowButton onClickHandler={() => navigate('/contact')}>Contact Us</ArrowButton>
+                    </motion.div>
                 </Banner>
 
                 <div className='services-container'>
@@ -25,22 +48,39 @@ const Services = () => {
                         <div className='services-item-content'>
                             <p className='services-item-header'>Branding defines your market identity; we provide logo design and visual identity to enhance your brand’s presence.</p>
                             <div className='services-item-list-container'>
-                                <div className='services-item-list-item'>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Identitiy and design</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visual Identity</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Styles</p>
-                                </div>
-                                <div className='services-item-list-item last-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visuals and Assets</p>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
@@ -51,22 +91,38 @@ const Services = () => {
                         <div className='services-item-content'>
                             <p className='services-item-header'>Branding defines your market identity; we provide logo design and visual identity to enhance your brand’s presence.</p>
                             <div className='services-item-list-container'>
-                                <div className='services-item-list-item'>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Identitiy and design</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visual Identity</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Styles</p>
-                                </div>
-                                <div className='services-item-list-item last-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }} className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visuals and Assets</p>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>
@@ -77,22 +133,42 @@ const Services = () => {
                         <div className='services-item-content'>
                             <p className='services-item-header'>Branding defines your market identity; we provide logo design and visual identity to enhance your brand’s presence.</p>
                             <div className='services-item-list-container'>
-                                <div className='services-item-list-item'>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Identitiy and design</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visual Identity</p>
-                                </div>
-                                <div className='services-item-list-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Styles</p>
-                                </div>
-                                <div className='services-item-list-item last-item'>
+                                </motion.div>
+                                <motion.div
+                                    initial={{ translateX: 30 }}
+                                    whileInView={{ translateX: 0 }}
+                                    viewport={{ margin: '-100px', once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visuals and Assets</p>
-                                </div>
+                                </motion.div>
                             </div>
                         </div>
                     </div>

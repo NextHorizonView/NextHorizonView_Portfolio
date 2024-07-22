@@ -16,7 +16,6 @@
     padding: 100px 0;
     width: 100%;
     max-width: 1600px;
-    min-height: 600px;
     border-radius: 45px;
     display: flex;
     flex-direction: column;
@@ -37,7 +36,17 @@
 }
 
 
-
+.book-a-call-btn button{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
 
 
 @media (max-width: 540px) {

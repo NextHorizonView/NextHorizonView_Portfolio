@@ -41,6 +41,10 @@
     color: white;
 }
 
+.banner-btn {
+    width: fit-content;
+}
+
 .project-content-item:hover {
     cursor: pointer;
 }

@@ -8,9 +8,18 @@
 .testimonials-container {
     display: flex;
     overflow-x: auto;
+    cursor: grab;
     width: 80%;
     max-width: 1600px;
     gap: 30px;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.testimonials-container:active {
+    cursor: grabbing;
 }
 
 .testimonials-container::-webkit-scrollbar {

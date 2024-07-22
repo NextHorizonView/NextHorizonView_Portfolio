@@ -1,0 +1,57 @@
+
+
+.book-call-btn-wrapper {
+    display: flex;
+    cursor: pointer;
+    margin-top: 40px;
+    width: fit-content;
+}
+
+.book-call-btn {
+    background-color: #ffffff;
+    width: 150px;
+    height: 40px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.book-call-btn-arr {
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-left: 2px;
+}
+
+.book-call-btn-wrapper:hover {
+    .book-call-btn-arr {
+        transform: translateX(-220px);
+    }
+    .book-call-btn {
+        transform: translateX(65px);
+    }
+}
+
+.book-call-btn-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.book-call-btn button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    z-index: 9999;
+    cursor: pointer;
+}

@@ -10,9 +10,12 @@ import Header from '../../components/home-section-header/Header.component';
 import Footer from '../../components/Footer/Footer.component';
 import Banner from '../../components/Banner/Banner.component';
 import { getTeamData } from '../../utils/sanity.utils';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
+import ArrowButton from '../../components/arrow-button/ArrowButton.component';
 
 const About = () => {
-
+    const navigate = useNavigate();
     const [team, setTeam] = useState([]);
 
     useEffect(() => {
@@ -27,38 +30,82 @@ const About = () => {
         <div className='about-page'>
             <div className='about-content'>
                 <Banner>
-                    <h1 className='banner-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</h1>
-                    <p>Crafting Exceptional Web Designs and Branding Solutions: Experience-Driven, Relationship-Focused</p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: '-200px', once: true }}
+                        transition={{ duration: 0.3 }}
+                        className='banner-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >Crafting Exceptional Web Designs and Branding Solutions: Experience-Driven, Relationship-Focused</motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: '-100px', once: true }}
+                        transition={{ duration: 0.3 }}
+                        className='banner-btn'
+                    >
+                        <ArrowButton onClickHandler={() => navigate('/services')}>Our Services</ArrowButton>
+                    </motion.div>
                 </Banner>
 
                 <section className='about-values'>
                     <div className='about-values-content'>
                         <div>
-                            <h1 className='about-header text-left'>The foundation</h1>
-                            <h1 className='about-header text-left'>Of our values</h1>
+                            <motion.h1
+                                initial={{ translateY: 50, skewY: 4 }}
+                                whileInView={{ translateY: 0, skewY: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='about-header text-left'>The foundation</motion.h1>
+                            <motion.h1
+                                initial={{ translateY: 50, skewY: 4 }}
+                                whileInView={{ translateY: 0, skewY: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='about-header text-left'>Of our values</motion.h1>
                         </div>
                         <div className='about-values-row'>
-                            <div className='about-values-row-item'>
+                            <motion.div
+                                initial={{ translateY: 10, scale: 1.1 }}
+                                whileInView={{ translateY: 0, scale: 1 }}
+                                viewport={{ margin: '-200px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='about-values-row-item'>
                                 <div className='icon-container'>
                                     <FontAwesomeIcon color='#000' className='icon' icon={faPen} />
                                 </div>
                                 <h2>Creativity</h2>
                                 <p>We infuse innovation into every design, ensuring it captivates and resonates.</p>
-                            </div>
-                            <div className='about-values-row-item'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateY: 10, scale: 1.1 }}
+                                whileInView={{ translateY: 0, scale: 1 }}
+                                viewport={{ margin: '-200px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='about-values-row-item'>
                                 <div className='icon-container'>
                                     <FontAwesomeIcon color='#000' className='icon' icon={faPen} />
                                 </div>
                                 <h2>Collaboration</h2>
                                 <p>We transform ideas into impactful solutions through open communication.</p>
-                            </div>
-                            <div className='about-values-row-item'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateY: 10, scale: 1.1 }}
+                                whileInView={{ translateY: 0, scale: 1 }}
+                                viewport={{ margin: '-200px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='about-values-row-item'>
                                 <div className='icon-container'>
                                     <FontAwesomeIcon color='#000' className='icon' icon={faPen} />
                                 </div>
                                 <h2>Quality</h2>
                                 <p>Excellence shines through in every detail, ensuring unparalleled results for our clients.</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -75,31 +122,52 @@ const About = () => {
                                 <h3 className='item middle'>Award</h3>
                                 <h3 className='item last'>Year</h3>
                             </div>
-                            <div className='grid-row separator'>
+                            <motion.div
+                                initial={{ translateX: 25 }}
+                                whileInView={{ translateX: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }}
+                                className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
                                 <p className='item last'>2024</p>
-                            </div>
-                            <div className='grid-row separator'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateX: 25 }}
+                                whileInView={{ translateX: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
                                 <p className='item last'>2024</p>
-                            </div>
-                            <div className='grid-row separator'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateX: 25 }}
+                                whileInView={{ translateX: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
                                 <p className='item last'>2024</p>
-                            </div>
-                            <div className='grid-row separator'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateX: 25 }}
+                                whileInView={{ translateX: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
                                 <p className='item last'>2024</p>
-                            </div>
-                            <div className='grid-row separator'>
+                            </motion.div>
+                            <motion.div
+                                initial={{ translateX: 25 }}
+                                whileInView={{ translateX: 0 }}
+                                viewport={{ margin: '-100px', once: true }}
+                                transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
                                 <p className='item last'>2024</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -161,10 +229,15 @@ export default About;
 
 
 const StatisticCard = ({ text1, text2 }) => (
-    <div className='statistic-card'>
+    <motion.div
+        initial={{ translateY: 10, scale: 1.1 }}
+        whileInView={{ translateY: 0, scale: 1 }}
+        viewport={{ margin: '-200px', once: true }}
+        transition={{ duration: 0.3 }}
+        className='statistic-card'>
         <h1>{text1}</h1>
         <p>{text2}</p>
-    </div>
+    </motion.div>
 )
 
 const ExpertCard = ({ img, name }) => (
@@ -180,7 +253,12 @@ const AccordianItem = ({ title, content, last }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={`accordian-item ${last ? 'last-accordian' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+        <motion.div
+            initial={{ translateY: 10, scale: 0.9 }}
+            whileInView={{ translateY: 0, scale: 1 }}
+            viewport={{ margin: '-100px', once: true }}
+            transition={{ duration: 0.3 }}
+            className={`accordian-item ${last ? 'last-accordian' : ''}`} onClick={() => setIsOpen(!isOpen)}>
             <div className='accordian-question'>
                 <p>{title}</p>
                 <FontAwesomeIcon icon={faXmark} className={isOpen ? 'acc-icon ' : 'acc-icon rotate'} />
@@ -188,6 +266,6 @@ const AccordianItem = ({ title, content, last }) => {
             <div className={`${!isOpen ? 'accordian-content' : 'accordian-content accordian-content-show'}`}>
                 <div className='accordian-content-text'>{content}</div>
             </div>
-        </div>
+        </motion.div>
     )
 }

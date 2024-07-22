@@ -7,9 +7,12 @@ import Footer from '../../components/Footer/Footer.component';
 import { getProjects } from '../../utils/sanity.utils';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import ArrowButton from '../arrow-button/ArrowButton.component';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsPreview = () => {
     const [projects, setProjects] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -35,6 +38,15 @@ const ProjectsPreview = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >Explore our celebrated projects showcasing excellence in web design and branding</motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: '-100px', once: true }}
+                        transition={{ duration: 0.3 }}
+                        className='banner-btn'
+                    >
+                        <ArrowButton onClickHandler={() => navigate('/about')}>About Us</ArrowButton>
+                    </motion.div>
                 </Banner>
 
                 <section className='projects-section'>
@@ -67,13 +79,20 @@ export default ProjectsPreview;
 
 const ProjectItem = ({ img, name, year, industry, id }) => {
     return (
-        <Link to={`/projects/${id}`} >
-            <div className='project-content-item'>
-                <img src={img} className='project-item-img' alt='' />
-                <p className='project-item-name'>{name}</p>
-                <p className='project-item-content'>{year} · {industry}</p>
-                <p></p>
-            </div>
-        </Link>
+        <motion.div
+            initial={{ scale: 0.75, rotateX: 50 }}
+            whileInView={{ scale: 1, rotateX: 0 }}
+            viewport={{ margin: '-200px', once: true }}
+            transition={{ duration: 0.3 }}
+        >
+            <Link to={`/projects/${id}`} >
+                <div className='project-content-item'>
+                    <img src={img} className='project-item-img' alt='' />
+                    <p className='project-item-name'>{name}</p>
+                    <p className='project-item-content'>{year} · {industry}</p>
+                    <p></p>
+                </div>
+            </Link>
+        </motion.div>
     )
 }
