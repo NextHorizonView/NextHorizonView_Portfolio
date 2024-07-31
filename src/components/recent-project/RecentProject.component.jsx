@@ -28,7 +28,7 @@ const RecentProject = () => {
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
+            viewport={{ margin: '-100px', once: false }}
             transition={{ duration: 0.5 }}
             className='recent-project-header'
           >
@@ -69,7 +69,7 @@ const ProjectItem = ({ img, name, year, industry, id }) => {
         ref={projectItemRef}
         initial={{ opacity: 0, scale: 0.2 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ margin: '-100px', once: true }}
+        viewport={{ margin: '-100px', once: false }}
         onMouseOut={handleMouseLeave}
         onMouseOver={handleMouseEnter}
         onClick={() => console.log('clicked')}

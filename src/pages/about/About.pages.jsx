@@ -34,19 +34,19 @@ const About = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ margin: '-100px', once: false }}
                         transition={{ duration: 0.3 }}
                         className='banner-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.5 }}
                     >Crafting Exceptional Web Designs and Branding Solutions: Experience-Driven, Relationship-Focused</motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ margin: '-100px', once: false }}
                         transition={{ duration: 0.3 }}
                         className='banner-btn'
                     >
@@ -60,13 +60,13 @@ const About = () => {
                             <motion.h1
                                 initial={{ translateY: 50, skewY: 4 }}
                                 whileInView={{ translateY: 0, skewY: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='about-header text-left'>The foundation</motion.h1>
                             <motion.h1
                                 initial={{ translateY: 50, skewY: 4 }}
                                 whileInView={{ translateY: 0, skewY: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='about-header text-left'>Of our values</motion.h1>
                         </div>
@@ -74,7 +74,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -86,7 +86,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -98,7 +98,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -126,7 +126,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateX: 25 }}
                                 whileInView={{ translateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }}
                                 className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
@@ -136,7 +136,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateX: 25 }}
                                 whileInView={{ translateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
@@ -145,7 +145,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateX: 25 }}
                                 whileInView={{ translateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
@@ -154,7 +154,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateX: 25 }}
                                 whileInView={{ translateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
@@ -163,7 +163,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateX: 25 }}
                                 whileInView={{ translateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ margin: '-100px', once: false }}
                                 transition={{ duration: 0.3 }} className='grid-row separator'>
                                 <p className='item first'>Avenix</p>
                                 <p className='item middle'>Awwwards SOTD</p>
@@ -233,7 +233,7 @@ const StatisticCard = ({ text1, text2 }) => (
     <motion.div
         initial={{ translateY: 10, scale: 1.1 }}
         whileInView={{ translateY: 0, scale: 1 }}
-        viewport={{ margin: '-100px', once: true }}
+        viewport={{ margin: '-100px', once: false }}
         transition={{ duration: 0.3 }}
         className='statistic-card'>
         <h1>{text1}</h1>
@@ -273,7 +273,7 @@ const AccordianItem = ({ title, content, last }) => {
         <motion.div
             initial={{ translateY: 10, scale: 0.9 }}
             whileInView={{ translateY: 0, scale: 1 }}
-            viewport={{ margin: '-100px', once: true }}
+            viewport={{ margin: '-100px', once: false }}
             transition={{ duration: 0.3 }}
             className={`accordian-item ${last ? 'last-accordian' : ''}`} onClick={() => setIsOpen(!isOpen)}>
             <div className='accordian-question'>

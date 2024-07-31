@@ -21,7 +21,7 @@
 .footer-container .spotlight {
     z-index: -1;
     position: absolute;
-    top: -100px;
+    top: -200px;
     left: 50%;
     transform: translateX(-50%);
     width: 2000px;

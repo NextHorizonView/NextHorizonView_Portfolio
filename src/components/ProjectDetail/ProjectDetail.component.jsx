@@ -7,10 +7,6 @@ import BookCall from '../book-call/BookCall.component'
 import Header from '../home-section-header/Header.component';
 import { motion } from 'framer-motion';
 
-/*
-translateX(0px) translateY(0px) scale(0.75) rotate(0deg) rotateX(50deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)
-*/
-
 const ProjectDetail = () => {
     const { id } = useParams();
     const [projectData, setProjectData] = useState({});
@@ -31,14 +27,14 @@ const ProjectDetail = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ margin: '-100px', once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5 }}
                             className='project-name'>{projectData?.name}</motion.h1>
                         <hr />
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ margin: '-100px', once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5 }}
                             className='project-header-content'>
                             <div>
@@ -61,9 +57,10 @@ const ProjectDetail = () => {
                     </section>
                     <section className='project-info'>
                         <motion.div
+
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ margin: '-100px', once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
                             <img src={projectData?.image1} alt={projectData?.name} />
@@ -75,7 +72,7 @@ const ProjectDetail = () => {
                         <motion.div
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ margin: '-250px', once: true }}
+                            viewport={{ margin: '-250px', once: false }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
                             <img src={projectData?.image2} alt={projectData?.name} />
@@ -88,14 +85,14 @@ const ProjectDetail = () => {
                             <motion.div
                                 initial={{ scale: 0.75, rotateX: 50 }}
                                 whileInView={{ scale: 1, rotateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ once: false }}
                                 transition={{ duration: 0.5 }}>
                                 <img src={projectData?.image3} alt={projectData?.name} />
                             </motion.div>
                             <motion.div
                                 initial={{ scale: 0.75, rotateX: 50 }}
                                 whileInView={{ scale: 1, rotateX: 0 }}
-                                viewport={{ margin: '-100px', once: true }}
+                                viewport={{ once: false }}
                                 transition={{ duration: 0.5 }}>
                                 <img src={projectData?.image4} alt={projectData?.name} />
                             </motion.div>
@@ -103,7 +100,7 @@ const ProjectDetail = () => {
                         <motion.div
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ margin: '-100px', once: true }}
+                            viewport={{ once: false }}
                             transition={{ duration: 0.5 }} className='project-info-odd'>
                             <img src={projectData?.image5} alt={projectData?.name} />
                         </motion.div>
@@ -124,8 +121,3 @@ const ProjectDetail = () => {
 }
 
 export default ProjectDetail
-
-/*
-
-perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(0deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)
-*/

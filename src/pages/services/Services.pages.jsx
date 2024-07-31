@@ -20,19 +20,19 @@ const Services = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ margin: '-100px', once: false }}
                         transition={{ duration: 0.3 }}
                         className='banner-header'>Elevating Sales Through <span className='italic'>Innovative</span> Quality Designs</motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                         transition={{ duration: 0.5 }}
                     >A top-tier Branding Service, renowned for expertise, dedicated to Cultivating Connections</motion.p>
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ margin: '-100px', once: false }}
                         transition={{ duration: 0.3 }}
                         className='banner-btn'
                     >
@@ -51,7 +51,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }}
                                     className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
@@ -60,7 +60,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visual Identity</p>
@@ -68,7 +68,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Styles</p>
@@ -76,7 +76,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visuals and Assets</p>
@@ -94,7 +94,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Identitiy and design</p>
@@ -102,7 +102,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visual Identity</p>
@@ -110,7 +110,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Brand Styles</p>
@@ -118,7 +118,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }} className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
                                     <p>Visuals and Assets</p>
@@ -136,7 +136,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }}
                                     className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
@@ -145,7 +145,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }}
                                     className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
@@ -154,7 +154,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }}
                                     className='services-item-list-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
@@ -163,7 +163,7 @@ const Services = () => {
                                 <motion.div
                                     initial={{ translateX: 30 }}
                                     whileInView={{ translateX: 0 }}
-                                    viewport={{ margin: '-100px', once: true }}
+                                    viewport={{ margin: '-100px', once: false }}
                                     transition={{ duration: 0.3 }}
                                     className='services-item-list-item last-item'>
                                     <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
