@@ -8,7 +8,7 @@ const BookCall = ({ children }) => {
         <motion.section
             initial={{ scale: 1.1, rptateX: -30 }}
             whileInView={{ scale: 1, rotateX: 0 }}
-            viewport={{ margin: '-200px', once: true }}
+            viewport={{ margin: '-100px', once: true }}
             transition={{ duration: 0.5 }}
             className='ready-to-scale-section'>
             <div className='ready-to-scale-container'>

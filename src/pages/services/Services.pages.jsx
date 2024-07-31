@@ -20,7 +20,7 @@ const Services = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-200px', once: true }}
+                        viewport={{ margin: '-100px', once: true }}
                         transition={{ duration: 0.3 }}
                         className='banner-header'>Elevating Sales Through <span className='italic'>Innovative</span> Quality Designs</motion.h1>
                     <motion.p

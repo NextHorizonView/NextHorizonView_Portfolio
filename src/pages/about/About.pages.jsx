@@ -34,7 +34,7 @@ const About = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-200px', once: true }}
+                        viewport={{ margin: '-100px', once: true }}
                         transition={{ duration: 0.3 }}
                         className='banner-header'>Bringing Your <span className='italic'>Brand</span> to Life with Designs That Soar</motion.h1>
                     <motion.p
@@ -74,7 +74,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-200px', once: true }}
+                                viewport={{ margin: '-100px', once: true }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -86,7 +86,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-200px', once: true }}
+                                viewport={{ margin: '-100px', once: true }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -98,7 +98,7 @@ const About = () => {
                             <motion.div
                                 initial={{ translateY: 10, scale: 1.1 }}
                                 whileInView={{ translateY: 0, scale: 1 }}
-                                viewport={{ margin: '-200px', once: true }}
+                                viewport={{ margin: '-100px', once: true }}
                                 transition={{ duration: 0.3 }}
                                 className='about-values-row-item'>
                                 <div className='icon-container'>
@@ -233,7 +233,7 @@ const StatisticCard = ({ text1, text2 }) => (
     <motion.div
         initial={{ translateY: 10, scale: 1.1 }}
         whileInView={{ translateY: 0, scale: 1 }}
-        viewport={{ margin: '-200px', once: true }}
+        viewport={{ margin: '-100px', once: true }}
         transition={{ duration: 0.3 }}
         className='statistic-card'>
         <h1>{text1}</h1>
