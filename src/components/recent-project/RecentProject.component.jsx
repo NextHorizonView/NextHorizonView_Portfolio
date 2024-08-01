@@ -22,7 +22,7 @@ const RecentProject = () => {
     <section className='recent-project-section'>
       <div className='section-btn'>Projects</div>
       <Header>Our designs <span className='italic'>just check it out</span></Header>
-      <p className='recent-project-text'>Begin your design journey with avocado tech.</p>
+      <p className='recent-project-text'>Begin your design journey with Horizon View.</p>
       <div className='recent-project-container'>
         <div className='recent-projrct-item'>
           <motion.h2
