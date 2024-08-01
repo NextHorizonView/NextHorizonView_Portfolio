@@ -1,10 +1,18 @@
 import { createClient } from "@sanity/client"
+import imageUrlBuilder from '@sanity/image-url';
 
 const client = createClient({
     projectId: "kqvfdjy6",
     dataset: "production",
     useCdn: true
 });
+
+const builder = imageUrlBuilder(client);
+
+function urlFor(source) {
+    return builder.image(source).width(767).height(630).url();
+}
+
 export async function getProjects() {
     const query = `*[_type == "project"] {
         name,
@@ -48,7 +56,13 @@ export async function getRecentProjects() {
         'image': image1.asset->url
     }`;
 
-    return await client.fetch(query);
+    const projects = await client.fetch(query);
+    projects.map(project => {
+        project.image = urlFor(project.image);
+        console.log(project.image);
+    });
+    console.log(projects);
+    return projects;
 }
 
 export async function getProjectById(id) {
