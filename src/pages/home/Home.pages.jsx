@@ -30,7 +30,7 @@ const Home = () => {
                     {servicesData.map((service, index) => <ServiceCard service={service} key={index} />)}
                 </div>
             </section>
-            <Testimonial />
+            {/* <Testimonial /> */}
             <div className='book-call'>
                 <BookCall>
                     <Header>Ready to scale your brand to <span className='italic'>new heights?</span></Header>

@@ -92,6 +92,10 @@
     font-size: 20px;
 }
 
+.project-detail-img {
+    border-radius: 30px;
+}
+
 @media(max-width: 900px) {
     .project-detail {
         margin-top: 100px;

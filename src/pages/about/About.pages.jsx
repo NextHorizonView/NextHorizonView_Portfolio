@@ -190,14 +190,14 @@ const About = () => {
                 </section>
 
 
-                <section className='about-expert'>
+                {/* <section className='about-expert'>
                     <div className='about-expert-container'>
                         <h1>Meet the expert:</h1>
                         <div className='expert-card-container'>
                             {team.map((expert, index) => <ExpertCard linkedIn={expert.linkedIn} img={expert.image} name={expert.name} key={index} />)}
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className='have-questions'>
                     <div className='have-questions-wrapper'>
