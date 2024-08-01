@@ -27,14 +27,14 @@ const ProjectDetail = () => {
                         <motion.h1
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-name'>{projectData?.name}</motion.h1>
                         <hr />
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-header-content'>
                             <div>
@@ -60,7 +60,7 @@ const ProjectDetail = () => {
 
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
                             <img src={projectData?.image1} alt={projectData?.name} />
@@ -72,7 +72,7 @@ const ProjectDetail = () => {
                         <motion.div
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ margin: '-250px', once: false }}
+                            viewport={{ margin: '-250px', once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
                             <img src={projectData?.image2} alt={projectData?.name} />
@@ -85,14 +85,14 @@ const ProjectDetail = () => {
                             <motion.div
                                 initial={{ scale: 0.75, rotateX: 50 }}
                                 whileInView={{ scale: 1, rotateX: 0 }}
-                                viewport={{ once: false }}
+                                viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}>
                                 <img src={projectData?.image3} alt={projectData?.name} />
                             </motion.div>
                             <motion.div
                                 initial={{ scale: 0.75, rotateX: 50 }}
                                 whileInView={{ scale: 1, rotateX: 0 }}
-                                viewport={{ once: false }}
+                                viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}>
                                 <img src={projectData?.image4} alt={projectData?.name} />
                             </motion.div>
@@ -100,7 +100,7 @@ const ProjectDetail = () => {
                         <motion.div
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.5 }} className='project-info-odd'>
                             <img src={projectData?.image5} alt={projectData?.name} />
                         </motion.div>
