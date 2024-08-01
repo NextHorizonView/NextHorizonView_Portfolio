@@ -64,7 +64,7 @@ const ProjectDetail = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
-                            <img src={projectData?.image1} alt={projectData?.name} />
+                            <img className='project-detail-img' src={projectData?.image1} alt={projectData?.name} />
                         </motion.div>
                         <div className='project-info-even'>
                             <h4>About Project:</h4>
@@ -76,7 +76,7 @@ const ProjectDetail = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
-                            <img src={projectData?.image2} alt={projectData?.name} />
+                            <img className='project-detail-img' src={projectData?.image2} alt={projectData?.name} />
                         </motion.div>
                         <div className='project-info-even'>
                             <h4>Challenges:</h4>
@@ -88,14 +88,14 @@ const ProjectDetail = () => {
                                 whileInView={{ scale: 1, rotateX: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}>
-                                <img src={projectData?.image3} alt={projectData?.name} />
+                                <img className='project-detail-img' src={projectData?.image3} alt={projectData?.name} />
                             </motion.div>
                             <motion.div
                                 initial={{ scale: 0.75, rotateX: 50 }}
                                 whileInView={{ scale: 1, rotateX: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}>
-                                <img src={projectData?.image4} alt={projectData?.name} />
+                                <img className='project-detail-img' src={projectData?.image4} alt={projectData?.name} />
                             </motion.div>
                         </div>
                         <motion.div
@@ -103,7 +103,7 @@ const ProjectDetail = () => {
                             whileInView={{ scale: 1, rotateX: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }} className='project-info-odd'>
-                            <img src={projectData?.image5} alt={projectData?.name} />
+                            <img className='project-detail-img' src={projectData?.image5} alt={projectData?.name} />
                         </motion.div>
                         <div className='project-info-even'>
                             <h4>Results:</h4>

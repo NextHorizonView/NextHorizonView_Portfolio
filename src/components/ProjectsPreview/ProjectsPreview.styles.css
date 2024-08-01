@@ -52,6 +52,9 @@
 .project-item-img {
     height: 500px;
     width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    object-position: center;
 }
 
 .project-item-img:hover {

@@ -126,4 +126,7 @@
     .scroll2 {
         display: none !important;
     }
+    .video-player {
+        height: 450px;
+    }
 }
