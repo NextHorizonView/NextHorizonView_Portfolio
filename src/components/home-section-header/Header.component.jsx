@@ -7,7 +7,7 @@ const Header = ({ children }) => {
         <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ margin: '-100px', once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.3 }}
             className='header'>{children}</motion.h1>
     )

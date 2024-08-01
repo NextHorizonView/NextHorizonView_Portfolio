@@ -30,7 +30,7 @@ const ProjectsPreview = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.3 }}
                         className='banner-header'>Explore our <span className='italic'>Award</span> winning work and case studies</motion.h1>
                     <motion.p
@@ -42,7 +42,7 @@ const ProjectsPreview = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ margin: '-100px', once: true }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.3 }}
                         className='banner-btn'
                     >
@@ -84,7 +84,7 @@ const ProjectItem = ({ img, name, year, industry, id }) => {
         <motion.div
             initial={{ scale: 0.75, rotateX: 50 }}
             whileInView={{ scale: 1, rotateX: 0 }}
-            viewport={{ margin: '-100px', once: true }}
+            viewport={{ once: true }}
             transition={{ duration: 0.3 }}
         >
             <Link to={`/projects/${id}`} >

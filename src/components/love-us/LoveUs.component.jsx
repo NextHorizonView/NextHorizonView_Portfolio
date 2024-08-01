@@ -10,7 +10,7 @@ const LoveUs = () => {
         <section className='love-us-section'>
             <h1>Reasons you will <span className='italic'>love</span> us.</h1>
             <div className='love-us-card-container'>
-                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-100px', once: true }} className='love-us-card'>
+                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className='love-us-card'>
                     <img src={lu1} className='love-us-card-img' />
                     <div>
                         <h3 className='love-us-card-header'>Lightning Fast Delivery</h3>
