@@ -12,7 +12,8 @@ const Brand = () => {
     return (
         <section className='brand-section'>
             <div className='brand-video-container'>
-                <video autoPlay={true} muted loop width="100%" className="video-player" src={video}></video>
+                {/* <video autoPlay={true} muted loop width="100%" className="video-player" src={video}></video> */}
+                <video autoPlay muted loop playsInline width="100%" className="video-player" src={video}></video>
             </div>
             <p className='brand-text'>Our designs are featured on:</p>
             <div className='brand-features'>
