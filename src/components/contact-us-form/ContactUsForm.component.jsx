@@ -54,11 +54,11 @@ const ContactUsForm = () => {
                     </div>
                     <div className=''>
                         <p>Phone:</p>
-                        <h4>(123) 456 7890</h4>
+                        <h4>+91 7400381491</h4>
                     </div>
                     <div className=''>
                         <p>Address:</p>
-                        <h4>Street Address, Your City, State, Zip Code, Country</h4>
+                        <h4>Vile Parle, Mumbai 400057, Maharashtra, India</h4>
                     </div>
                     <hr />
                     <div>
