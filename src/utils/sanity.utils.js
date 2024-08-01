@@ -40,7 +40,7 @@ export async function getTeamData() {
 }
 
 export async function getRecentProjects() {
-    const query = `*[_type == "project"] | order(_createdAt desc)[0..3] {
+    const query = `*[_type == "project" && isRecent == true]{
         name,
         year,
         industry,

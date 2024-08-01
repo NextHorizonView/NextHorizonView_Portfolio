@@ -6,7 +6,7 @@ import Cursor from '../../components/Cursor/Cursor.component'
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    
+
     return (
         <>
             <div className='nav-container' style={{ backgroundColor: isMenuOpen && '#121212', zIndex: 999 }}>
@@ -25,10 +25,10 @@ const Navigation = () => {
                 </div>
             </div>
             <div className={`${isMenuOpen ? 'sm-nav-container reveal' : 'sm-nav-container'}`}>
-                <Link className='nav-link sm-nav-link' to='/projects'>Projects</Link>
-                <Link className='nav-link sm-nav-link' to='/about'>About</Link>
-                <Link className='nav-link sm-nav-link' to='/services'>Services</Link>
-                <Link className='nav-link sm-nav-link' to='/contact'>Contact</Link>
+                <Link className='nav-link sm-nav-link' to='/projects' onClick={() => setIsMenuOpen(!isMenuOpen)}>Projects</Link>
+                <Link className='nav-link sm-nav-link' to='/about' onClick={() => setIsMenuOpen(!isMenuOpen)}>About</Link>
+                <Link className='nav-link sm-nav-link' to='/services' onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</Link>
+                <Link className='nav-link sm-nav-link' to='/contact' onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</Link>
             </div>
             <Outlet />
             <div className='cursor'>
