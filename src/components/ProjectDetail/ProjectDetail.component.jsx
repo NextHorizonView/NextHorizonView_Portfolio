@@ -6,6 +6,7 @@ import Footer from '../Footer/Footer.component';
 import BookCall from '../book-call/BookCall.component'
 import Header from '../home-section-header/Header.component';
 import { motion } from 'framer-motion';
+import ScrollToTop from '../scroll-to-top/ScrollToTopComponent';
 
 const ProjectDetail = () => {
     const { id } = useParams();
@@ -116,6 +117,7 @@ const ProjectDetail = () => {
                 </BookCall>
             </div>
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }

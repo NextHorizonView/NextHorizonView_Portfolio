@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ArrowButton from '../arrow-button/ArrowButton.component';
 import { useNavigate } from 'react-router-dom';
+import ScrollToTop from '../scroll-to-top/ScrollToTopComponent';
 
 const ProjectsPreview = () => {
     const [projects, setProjects] = useState([]);
@@ -70,6 +71,7 @@ const ProjectsPreview = () => {
                 </BookCall>
             </div>
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }

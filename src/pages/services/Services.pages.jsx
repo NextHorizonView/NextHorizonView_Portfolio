@@ -10,6 +10,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ArrowButton from '../../components/arrow-button/ArrowButton.component';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTopComponent';
 
 const Services = () => {
     const navigate = useNavigate();
@@ -180,6 +181,7 @@ const Services = () => {
                 </BookCall>
             </div>
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }

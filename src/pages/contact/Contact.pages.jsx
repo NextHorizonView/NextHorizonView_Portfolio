@@ -9,6 +9,7 @@ import Button from '../../components/button/Button.component';
 import Footer from '../../components/Footer/Footer.component'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTopComponent';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -92,6 +93,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }

@@ -12,6 +12,7 @@ import Footer from '../../components/Footer/Footer.component';
 import WhoWeAre from '../../components/who-we-are/WhoWeAre.component';
 import LoveUs from '../../components/love-us/LoveUs.component';
 import BookCall from '../../components/book-call/BookCall.component';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTopComponent';
 
 const Home = () => {
     return (
@@ -38,6 +39,7 @@ const Home = () => {
             </div>
             <ContactUsForm />
             <Footer />
+            <ScrollToTop />
         </div>
     )
 }

@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import ArrowButton from '../../components/arrow-button/ArrowButton.component';
 import { useHover } from '../../contexts/Cursor.context';
+import ScrollToTop from '../../components/scroll-to-top/ScrollToTopComponent';
 
 const About = () => {
     const navigate = useNavigate();
@@ -221,7 +222,7 @@ const About = () => {
                 </BookCall>
             </div>
             <Footer />
-
+            <ScrollToTop />
         </div>
     )
 }
