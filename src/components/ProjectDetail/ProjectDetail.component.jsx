@@ -73,7 +73,7 @@ const ProjectDetail = () => {
                         <motion.div
                             initial={{ scale: 0.75, rotateX: 50 }}
                             whileInView={{ scale: 1, rotateX: 0 }}
-                            viewport={{ margin: '-250px', once: true }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                             className='project-info-odd'>
                             <img src={projectData?.image2} alt={projectData?.name} />

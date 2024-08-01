@@ -18,7 +18,7 @@ const LoveUs = () => {
                             a time in just a few days.</p>
                     </div>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-140px', once: true }} className='love-us-card'>
+                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className='love-us-card'>
                     <img src={lu2} className='love-us-card-img' />
                     <div>
                         <h3 className='love-us-card-header'>Unlimited Revisions</h3>
@@ -26,7 +26,7 @@ const LoveUs = () => {
                             a time in just a few days.</p>
                     </div>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: '-180px', once: true }} className='love-us-card'>
+                <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className='love-us-card'>
                     <img src={lu3} className='love-us-card-img' />
                     <div>
                         <h3 className='love-us-card-header'>Unique & All Yours</h3>
