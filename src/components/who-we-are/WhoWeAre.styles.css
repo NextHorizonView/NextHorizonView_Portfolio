@@ -9,6 +9,7 @@
     font-size: 64px;
     font-weight: bold;
     text-align: left;
+    margin: 0;
 }
 
 .who-we-are-wrapper {
@@ -20,6 +21,7 @@
     flex-direction: column;
     border-radius: 25px;
     max-width: 1600px;
+    justify-content: center;
 }
 
 .who-we-are-frame {
@@ -38,6 +40,10 @@
     font-size: 48px;
 }
 
+.who-we-are-sm-para {
+    margin-top: 4px;
+    font-size: 24px;
+}
 
 @media(max-width: 1920px) {
     .who-we-are-frame {
@@ -53,6 +59,9 @@
     .who-we-are-para  {
         font-size: 32px;
     }
+    .who-we-are-sm-para {
+        font-size: 18px;
+    }
     .who-we-are-frame .header {
         font-size: 36px;
     }
@@ -66,6 +75,9 @@
     .who-we-are-para {
         font-size: 28px;
     }
+    .who-we-are-sm-para {
+        font-size: 14px;
+    }
     .who-we-are-frame .header {
         font-size: 32px;
     }
@@ -76,13 +88,18 @@
         background-color: transparent;
     }
     .who-we-are-frame {
-        padding: 20px 10px;
+        padding: 40px 10px;
         background-image: url(../../assets/who-we-are-frame-sm.png);
     }
     .who-we-are-para {
         font-size: 18px;
+        margin: 0;
+    }
+    .who-we-are-sm-para {
+        font-size: 12px;
     }
     .who-we-are-frame .header {
         font-size: 24px;
+        margin: 0;
     }
 }

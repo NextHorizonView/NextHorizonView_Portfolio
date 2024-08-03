@@ -13,9 +13,7 @@ const WhoWeAre = () => {
                 <h1>Who <span className='italic'>we</span> are?</h1>
                 <motion.div transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ once: true }} className='who-we-are-frame'>
                     <p className='header'>Introduction</p>
-                    <p className='who-we-are-para'>At the forefront of design innovation, our
-                        agency harnesses digital creativity to help
-                        brands innovate rapidly and effectively.</p>
+                    <p className='who-we-are-para'>At Horizon view, we deliver exceptional software solutions to scale your business 2x. </p>
                     <ArrowButton>
                         Book a call
                         <PopupButton
@@ -24,7 +22,7 @@ const WhoWeAre = () => {
 
                         />
                     </ArrowButton>
-
+                    <p className='who-we-are-sm-para'>We guaranteed a reply within 12 hours. If we fail, you will get 15% off instantly with No question asked.</p>
                 </motion.div>
             </div>
         </section>

@@ -15,7 +15,7 @@ const Brand = () => {
                 {/* <video autoPlay={true} muted loop width="100%" className="video-player" src={video}></video> */}
                 <video autoPlay muted loop playsInline width="100%" className="video-player" src={video}></video>
             </div>
-            <p className='brand-text'>Our designs are featured on:</p>
+            <p className='brand-text'>Our softwares are featured on:</p>
             <div className='brand-features'>
                 <div className='scroll'>
                     <img src={Sp1} className='brand-img' />

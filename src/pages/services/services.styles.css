@@ -39,6 +39,15 @@
     font-weight: 400;
 }
 
+.service-item-text {
+    font-size: 14px;
+    margin-top: 4px;
+}
+.service-item-list-header {
+    line-height: 0.9;
+    font-size: 20px;
+}
+
 .services-item-list-container {
     display: flex;
     flex-direction: column;
@@ -47,7 +56,7 @@
 
 .services-item-list-item {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     font-size: 24px;
     font-weight: 500;
@@ -66,5 +75,20 @@
     .services-item {
         flex-direction: column;
         gap: 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .services-item-header {
+        font-size: 20px;
+    }
+    .service-item-text {
+        font-size: 12px;
+    }
+    .service-item-list-header {
+        font-size: 16px;
+    }
+    .services-item-list-item {
+        font-size: 20px;
     }
 }

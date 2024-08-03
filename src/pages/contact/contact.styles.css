@@ -87,7 +87,7 @@
 .address-info-item {
     display: flex;
     gap: 20px;
-    align-items: start;
+    align-items: center;
     font-size: 24px;
     width: 100%;
     padding: 40px 10px 20px 10px;

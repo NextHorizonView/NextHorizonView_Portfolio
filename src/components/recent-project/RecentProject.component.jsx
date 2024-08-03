@@ -21,8 +21,8 @@ const RecentProject = () => {
   return (
     <section className='recent-project-section'>
       <div className='section-btn'>Projects</div>
-      <Header>Our designs <span className='italic'>just check it out</span></Header>
-      <p className='recent-project-text'>Begin your design journey with Horizon View.</p>
+      <Header>Our software <span className='italic'>just check it out</span></Header>
+      <p className='recent-project-text'>Begin your software journey with Horizon View</p>
       <div className='recent-project-container'>
         <div className='recent-projrct-item'>
           <motion.h2
@@ -67,8 +67,8 @@ const ProjectItem = ({ img, name, year, industry, id }) => {
     <a href={`/projects/${id}`}>
       <motion.div
         ref={projectItemRef}
-        initial={{ opacity: 0, scale: 0.2 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ scale: 0.75 }}
+        whileInView={{ rotateX: 0, scale: 1 }}
         viewport={{ once: true }}
         onMouseOut={handleMouseLeave}
         onMouseOver={handleMouseEnter}

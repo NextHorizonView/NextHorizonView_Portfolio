@@ -10,8 +10,7 @@ const Footer = () => {
                 <div className='spotlight' />
                 <div className='footer-content footer-content-1'>
                     <img src={logo} />
-                    <p>Creative and Award winning brand &
-                        design agencies</p>
+                    <p>Thinks ahead</p>
                 </div>
                 <div className='list footer-content'>
                     <div>

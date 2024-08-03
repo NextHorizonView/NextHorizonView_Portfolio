@@ -21,9 +21,8 @@ const LoveUs = () => {
                 <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className='love-us-card'>
                     <img src={lu2} className='love-us-card-img' />
                     <div>
-                        <h3 className='love-us-card-header'>Unlimited Revisions</h3>
-                        <p className='love-us-card-text'>Receive your designs one at<br />
-                            a time in just a few days.</p>
+                        <h3 className='love-us-card-header'>Professional Upgrades</h3>
+                        <p className='love-us-card-text'>Receive your professional upgrades by our team experts.</p>
                     </div>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className='love-us-card'>
