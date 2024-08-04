@@ -4,6 +4,7 @@ import Header from '../home-section-header/Header.component';
 import { motion } from 'framer-motion';
 import { getRecentProjects } from '../../utils/sanity.utils';
 import { useHover } from '../../contexts/Cursor.context';
+import { useNavigate } from 'react-router-dom';
 
 const RecentProject = () => {
   const [recentProjects, setRecentProjects] = useState([]);
@@ -11,7 +12,6 @@ const RecentProject = () => {
   useEffect(() => {
     const fetchData = async () => {
       const projects = await getRecentProjects();
-      console.log(projects);
       setRecentProjects(projects)
     }
     fetchData();
@@ -53,6 +53,7 @@ const RecentProject = () => {
 export default RecentProject;
 
 const ProjectItem = ({ img, name, year, industry, id }) => {
+  const navigate = useNavigate();
   const { setIsHovered } = useHover();
   const projectItemRef = useRef(null);
 
@@ -65,23 +66,28 @@ const ProjectItem = ({ img, name, year, industry, id }) => {
     setIsHovered(false);
   };
 
+  const handleClick = () => {
+    navigate(`/projects/${id}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <a href={`/projects/${id}`}>
-      <motion.div
-        ref={projectItemRef}
-        initial={{ scale: 0.75 }}
-        whileInView={{ rotateX: 0, scale: 1 }}
-        viewport={{ once: true }}
-        onMouseOut={handleMouseLeave}
-        onMouseOver={handleMouseEnter}
-        onClick={() => console.log('clicked')}
-      >
-        <div className='project-card'>
-          <img src={img} alt='project1' className='project-img' />
-          <h3>{name}</h3>
-          <p className='project-item-text'>{year}<span />{industry}</p>
-        </div>
-      </motion.div>
-    </a>
+
+    <motion.div
+      ref={projectItemRef}
+      initial={{ scale: 0.75 }}
+      whileInView={{ rotateX: 0, scale: 1 }}
+      viewport={{ once: true }}
+      onMouseOut={handleMouseLeave}
+      onMouseOver={handleMouseEnter}
+      onClick={handleClick}
+      className='project-item-container'
+    >
+      <div className='project-card'>
+        <img src={img} alt='project1' className='project-img' />
+        <h3>{name}</h3>
+        <p className='project-item-text'>{year}<span />{industry}</p>
+      </div>
+    </motion.div>
   );
 };
