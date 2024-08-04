@@ -77,21 +77,18 @@ const Contact = () => {
             <h2>Reach out Directly</h2>
             <div className='address-info'>
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px', opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true }} className='address-info-item'>
-                {/* <img src={locImg} className='address-icon' /> */}
                 <FontAwesomeIcon color='#fff' icon={faLocationDot} />
-                <h3>1234 Street Name, City Name, United States</h3>
+                <h3>Vile Parle, Mumbai 400057, Maharashtra, India</h3>
               </motion.div>
               <hr />
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px' }} whileInView={{ translateX: 0 }} viewport={{ once: true }} className='address-info-item'>
-                {/* <img src={phoneImg} className='address-icon' /> */}
                 <FontAwesomeIcon color='#fff' icon={faPhone} />
-                <h3>+1 234 567 890</h3>
+                <h3>+91 7400381491</h3>
               </motion.div>
               <hr />
               <motion.div transition={{ duration: 0.5, ease: "easeOut" }} initial={{ translateX: '20px' }} whileInView={{ translateX: 0 }} viewport={{ once: true }} className='address-info-item'>
-                {/* <img src={messageImg} className='address-icon' /> */}
                 <FontAwesomeIcon color='#fff' icon={faEnvelope} />
-                <h3>Personal@gmail.com</h3>
+                <h3>support@horizonview.in</h3>
               </motion.div>
             </div>
           </div>

@@ -58,17 +58,6 @@ const Services = () => {
                                 <ServiceListItem header='Cybersecurity' text='We deliver robust cybersecurity solutions to protect your business from threats. Our services include risk assessments, threat detection, and incident response.' />
                                 <ServiceListItem header='Data Analytics' text='We provide data analytics services to help you make data-driven decisions. Our team uses advanced tools and techniques to extract valuable insights from your data.' />
                                 <ServiceListItem header='Technical Support' text='Our technical support team is available to assist you with any IT issues. We ensure minimal downtime and quick resolution to keep your operations running smoothly.' />
-                                <motion.div
-                                    initial={{ translateX: 30 }}
-                                    whileInView={{ translateX: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3 }} className='services-item-list-item last-item'>
-                                    <FontAwesomeIcon color='#fff' className='' icon={faPlus} />
-                                    <p>
-                                        Technical Support<br />
-                                        Our technical support team is available to assist you with any IT issues. We ensure minimal downtime and quick resolution to keep your operations running smoothly.
-                                    </p>
-                                </motion.div>
                             </div>
                         </div>
                     </div>

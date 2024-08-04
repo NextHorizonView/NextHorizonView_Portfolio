@@ -19,7 +19,7 @@ const RecentProject = () => {
     , [])
 
   return (
-    <section className='recent-project-section'>
+    recentProjects && recentProjects.length > 0 ? <section className='recent-project-section'>
       <div className='section-btn'>Projects</div>
       <Header>Our software <span className='italic'>just check it out</span></Header>
       <p className='recent-project-text'>Begin your software journey with Horizon View</p>
@@ -45,6 +45,8 @@ const RecentProject = () => {
         </div>
       </div>
     </section>
+      :
+      <></>
   )
 }
 
