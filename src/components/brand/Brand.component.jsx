@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Brand.styles.css'
 import Sp1 from '../../assets/sp1.png'
 import Sp2 from '../../assets/sp2.png'
@@ -9,11 +9,20 @@ import Sp6 from '../../assets/sp-6.png'
 import video from '../../assets/video.mp4'
 
 const Brand = () => {
+    useEffect(() => {
+        const videoElement = document.getElementById('video-player');
+        if (videoElement) {
+            videoElement.play();
+        }
+    }, []);
     return (
         <section className='brand-section'>
             <div className='brand-video-container'>
                 {/* <video autoPlay={true} muted loop width="100%" className="video-player" src={video}></video> */}
-                <video autoPlay muted loop playsInline width="100%" className="video-player" src={video}></video>
+                {/* <video autoPlay muted loop playsInline width="100%" className="video-player" src={video}></video> */}
+                <video id="video-player" muted loop playsInline webkit-playsinline width="100%" className="video-player" src={video}
+                ></video>
+
             </div>
             <p className='brand-text'>Our softwares are featured on:</p>
             <div className='brand-features'>
