@@ -84,6 +84,14 @@
     margin-top: 10px;
 }
 
+.social-link {
+    font-size: 32px;
+    color: white;
+}
+
+.social-link:hover {
+    color: #8087FF;
+}
 
 @media(max-width: 1040px) {
     .contact-us-form {

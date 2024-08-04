@@ -2,6 +2,8 @@ import React from 'react'
 import './Footer.styles.css'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
     return (
@@ -25,9 +27,9 @@ const Footer = () => {
                     <div>
                         <p>Follow us</p>
                         <ul>
-                            <li>Instagram</li>
-                            <li>Twitter</li>
-                            <li>Linked In</li>
+                            <li><a target='_blank' href='https://www.linkedin.com/company/horizon-views/'>LinkedIn</a></li>
+                            <li><a target='_blank' href='https://www.instagram.com/nexthorizonview/profilecard/?igsh=MW1uZHJneWNtYnkwcg=='>Instagram</a></li>
+                            <li><a target='_blank' href='https://x.com/nexthorizonview/'>X</a></li>
                         </ul>
                     </div>
                 </div>

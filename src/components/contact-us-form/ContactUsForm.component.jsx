@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react'
 import './ContactUsForm.styles.css'
 import Header from '../home-section-header/Header.component'
-import InstImg from '../../assets/insta.png'
-import LinkedIn from '../../assets/linkedin.png'
-import TwitterImg from '../../assets/twitter.png'
 import FormInput from '../FormInput/FormInput.component'
 import Button from '../button/Button.component'
 import emailjs from '@emailjs/browser'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faInstagram, faTwitter, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
 
 const ContactUsForm = () => {
     const [name, setName] = useState('');
@@ -64,9 +64,9 @@ const ContactUsForm = () => {
                     <div>
                         <p>Follow us</p>
                         <div className='social-link-container'>
-                            <img src={LinkedIn} />
-                            <img src={TwitterImg} />
-                            <img src={InstImg} />
+                            <a target='_blank' className='social-link' href='https://www.linkedin.com/company/horizon-views/'><FontAwesomeIcon icon={faLinkedin} /></a>
+                            <a target='_blank' className='social-link' href='https://www.instagram.com/nexthorizonview/profilecard/?igsh=MW1uZHJneWNtYnkwcg=='><FontAwesomeIcon icon={faInstagram} /></a>
+                            <a target='_blank' className='social-link' href='https://x.com/nexthorizonview/'><FontAwesomeIcon icon={faXTwitter} /></a>
                         </div>
                     </div>
                 </div>
