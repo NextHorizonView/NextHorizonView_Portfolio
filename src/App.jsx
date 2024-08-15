@@ -6,6 +6,7 @@ import Contact from './pages/contact/Contact.pages';
 import Services from './pages/services/Services.pages';
 import About from './pages/about/About.pages';
 import Navigation from './pages/navigation/Navigation.pages';
+import Careers from './pages/Careers/Careers.pages';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route path='services' element={<Services />} />
         <Route path='about' element={<About />} />
       </Route>
+      <Route path='careers' element={<Careers />} />
     </Routes>
   )
 }

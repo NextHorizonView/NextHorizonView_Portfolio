@@ -21,7 +21,7 @@ const Contact = () => {
   const [messageSuccess, setMessageSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const form = useRef();
-
+  const [openModal, setOpenModal] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
