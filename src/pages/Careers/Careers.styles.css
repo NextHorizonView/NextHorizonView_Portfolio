@@ -4,7 +4,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .career-section {
@@ -25,7 +28,7 @@
     width: 100%;
     max-width: 500px;
     overflow-y: auto;
-    height: 80vh;
+    max-height: 80vh;
 }
 
 .career-form h1 {

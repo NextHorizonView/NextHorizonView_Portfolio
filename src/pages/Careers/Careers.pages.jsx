@@ -18,6 +18,7 @@ const Careers = () => {
     const [resume, setResume] = useState(null);
     const [phone, setPhone] = useState('');
     const [role, setRole] = useState('');
+    const [referralCode, setReferralCode] = useState('');
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
 
@@ -62,7 +63,7 @@ const Careers = () => {
             linkedin,
             phone,
             role,
-            referralCode: generateReferralCode(name, email),
+            referralCode,
         };
         try {
             await createWorkDocument(formData, resume);
@@ -74,10 +75,11 @@ const Careers = () => {
             setPhone('');
             setRole('');
             setResume(null);
+            setReferralCode('');
             fileInputRef.current.value = '';
         } catch (error) {
             console.error('Error submitting application: ', error);
-            alert('Error submitting application');
+            alert(error.message);
         }
         setLoading(false);
     }
@@ -111,7 +113,7 @@ const Careers = () => {
                         <div className="form-group">
                             <label htmlFor="linkedin">LinkedIn</label>
                             <input
-                                type="text"
+                                type="url"
                                 id="linkedin"
                                 value={linkedin}
                                 onChange={(e) => setLinkedin(e.target.value)}
@@ -121,7 +123,7 @@ const Careers = () => {
                         <div className="form-group">
                             <label htmlFor="phone">Phone</label>
                             <input
-                                type="text"
+                                type="number"
                                 id="phone"
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
@@ -143,6 +145,15 @@ const Careers = () => {
                                     </option>
                                 ))}
                             </select>
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">Referal Code(optional)</label>
+                            <input
+                                type="text"
+                                id="referralCode"
+                                value={referralCode}
+                                onChange={(e) => setReferralCode(e.target.value)}
+                            />
                         </div>
                         <div className="form-group">
                             <label htmlFor="resume">Upload Resume</label>
