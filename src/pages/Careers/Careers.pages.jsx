@@ -88,7 +88,7 @@ const Careers = () => {
         <div className="career-page">
             <section className='career-section'>
                 <form className="career-form" onSubmit={onSubmitHandler}>
-                    <h1 className='career-form-header'>Apply for a Job</h1>
+                    <h1 className='career-form-header'>Apply for an Internship</h1>
                     <div className='form-container'>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
