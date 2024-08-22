@@ -25,6 +25,10 @@ const Brand = () => {
                 <video id="video-player" muted loop playsInline webkit-playsinline width="100%" className="video-player" src={video}
                 ></video>
 
+                <motion.div className='internship-banner' transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ once: true }}>
+                    <p className='banner-text'>Want to apply for an internship? <Link to='/careers'>Click here</Link></p>
+                </motion.div>
+
             </div>
             {/* <p className='brand-text'>Our softwares are featured on:</p> */}
             {/* <div className='brand-features'>
@@ -45,9 +49,7 @@ const Brand = () => {
                     <img src={Sp6} className='brand-img' />
                 </div>
             </div> */}
-            <motion.div className='banner' transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ once: true }}>
-                <p className='banner-text'>Want to apply for an internship? <Link to='/careers'>Click here</Link></p>
-            </motion.div>
+
         </section>
     )
 }

@@ -75,10 +75,36 @@
 
 .brand-video-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1600px;
+    padding: 0 60px;
+    border-radius: 26px;
+    gap: 40px;
+}
+
+.internship-banner {
+    width: 100%;
+    display: flex;
     justify-content: center;
     max-width: 1600px;
     padding: 0 60px;
     border-radius: 26px;
+    background-color: #080a1a;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.internship-banner p {
+    font-size: 42px;
+    margin: 0;
+    text-align: center;
+}
+
+.internship-banner a {
+    color: #8f9954;
 }
 
 .video-player {
@@ -105,6 +131,9 @@
 @media(max-width: 900px) {
     .brand-features {
         width: 85vw;
+    }
+    .internship-banner p {
+        font-size: 32px;
     }
 }
 
@@ -136,8 +165,8 @@
         animation: none;
     }
 
-    .scroll {
-        
+    .internship-banner p {
+        font-size: 24px;
     }
 
     .scroll2 {
