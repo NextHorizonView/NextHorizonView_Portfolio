@@ -7,6 +7,8 @@ import Sp4 from '../../assets/sp-4.png'
 import Sp5 from '../../assets/sp5.png'
 import Sp6 from '../../assets/sp-6.png'
 import video from '../../assets/video.mp4'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Brand = () => {
     useEffect(() => {
@@ -24,8 +26,8 @@ const Brand = () => {
                 ></video>
 
             </div>
-            <p className='brand-text'>Our softwares are featured on:</p>
-            <div className='brand-features'>
+            {/* <p className='brand-text'>Our softwares are featured on:</p> */}
+            {/* <div className='brand-features'>
                 <div className='scroll'>
                     <img src={Sp1} className='brand-img' />
                     <img src={Sp2} className='brand-img' />
@@ -42,7 +44,10 @@ const Brand = () => {
                     <img src={Sp5} className='brand-img' />
                     <img src={Sp6} className='brand-img' />
                 </div>
-            </div>
+            </div> */}
+            <motion.div className='banner' transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ once: true }}>
+                <p className='banner-text'>Want to apply for an internship? <Link to='/careers'>Click here</Link></p>
+            </motion.div>
         </section>
     )
 }

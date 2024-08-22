@@ -29,6 +29,7 @@ const Navigation = () => {
                 <Link className='nav-link sm-nav-link' to='/about' onClick={() => setIsMenuOpen(!isMenuOpen)}>About</Link>
                 <Link className='nav-link sm-nav-link' to='/services' onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</Link>
                 <Link className='nav-link sm-nav-link' to='/contact' onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</Link>
+                <Link className='nav-link sm-nav-link' to='/careers' onClick={() => setIsMenuOpen(!isMenuOpen)}>Careers</Link>
             </div>
             <Outlet />
             <div className='cursor'>
