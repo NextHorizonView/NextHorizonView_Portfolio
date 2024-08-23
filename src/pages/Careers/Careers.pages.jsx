@@ -8,7 +8,6 @@ const roles = [
     'UI UX Designer',
     'Data Scientist',
     'ML Engineer',
-    'Others'
 ];
 
 const Careers = () => {
@@ -18,6 +17,7 @@ const Careers = () => {
     const [resume, setResume] = useState(null);
     const [phone, setPhone] = useState('');
     const [role, setRole] = useState('');
+    const [customRole, setCustomRole] = useState('');
     const [referralCode, setReferralCode] = useState('');
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
@@ -33,25 +33,11 @@ const Careers = () => {
         }
     };
 
-    const generateReferralCode = (name, email) => {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        let referralCode = '';
-        if (name.length > 0) {
-            referralCode += name.charAt(0).toUpperCase();
-        } else {
-            referralCode += characters.charAt(Math.floor(Math.random() * 26));
+    const handleRoleChange = (e) => {
+        setRole(e.target.value);
+        if (e.target.value !== 'Other') {
+            setCustomRole(''); // Reset custom role when selecting a predefined role
         }
-        if (email.length > 0) {
-            referralCode += email.charAt(0).toUpperCase();
-        } else {
-            referralCode += characters.charAt(Math.floor(Math.random() * 26));
-        }
-        for (let i = 0; i < 4; i++) {
-            const randomIndex = Math.floor(Math.random() * characters.length);
-            referralCode += characters[randomIndex];
-        }
-
-        return referralCode;
     };
 
     const onSubmitHandler = async (e) => {
@@ -62,7 +48,7 @@ const Careers = () => {
             email,
             linkedin,
             phone,
-            role,
+            role: role === 'Other' ? customRole : role,
             referralCode,
         };
         try {
@@ -76,6 +62,7 @@ const Careers = () => {
             setRole('');
             setResume(null);
             setReferralCode('');
+            setCustomRole('')
             fileInputRef.current.value = '';
         } catch (error) {
             console.error('Error submitting application: ', error);
@@ -130,12 +117,12 @@ const Careers = () => {
                                 required
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group dropdown">
                             <label htmlFor="role">Role</label>
                             <select
                                 id="role"
                                 value={role}
-                                onChange={(e) => setRole(e.target.value)}
+                                onChange={handleRoleChange}
                                 required
                             >
                                 <option value="" disabled>Select a role</option>
@@ -144,7 +131,19 @@ const Careers = () => {
                                         {roleOption}
                                     </option>
                                 ))}
+                                <option value="Other">Other</option>
                             </select>
+
+                            {role === 'Other' && (
+                                <input
+                                    type="text"
+                                    value={customRole}
+                                    onChange={(e) => setCustomRole(e.target.value)}
+                                    placeholder="Enter role"
+                                    required
+                                    className='other-role-input'
+                                />
+                            )}
                         </div>
                         <div className="form-group">
                             <label htmlFor="phone">Referal Code(optional)</label>

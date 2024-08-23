@@ -37,6 +37,10 @@
     text-align: center;
 }
 
+.other-role-input {
+    margin-top: 20px;
+}
+
 .form-group {
     margin-bottom: 15px;
 }
