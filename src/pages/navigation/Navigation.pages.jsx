@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 import Logo from '../../assets/logo.png'
 import './Navigation.styles.css'
 import Cursor from '../../components/Cursor/Cursor.component'
+import { PopupButton } from 'react-calendly'
 
 const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +19,14 @@ const Navigation = () => {
                     <Link className='nav-link' to='/about'>About</Link>
                     <Link className='nav-link' to='/services'>Services</Link>
                     <Link className='nav-link' to='/contact'>Contact</Link>
+                    <div className='nav-link gradient-text book-a-call-btn' to='/contact'>
+                        Book a call
+                        <PopupButton
+                            url="https://calendly.com/nexthorizonview/30min"
+                            rootElement={document.getElementById("root")}
+
+                        />
+                    </div>
                 </div>
                 <div className='menubar' onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <div className='bar' />
@@ -30,6 +39,14 @@ const Navigation = () => {
                 <Link className='nav-link sm-nav-link' to='/services' onClick={() => setIsMenuOpen(!isMenuOpen)}>Services</Link>
                 <Link className='nav-link sm-nav-link' to='/contact' onClick={() => setIsMenuOpen(!isMenuOpen)}>Contact</Link>
                 <Link className='nav-link sm-nav-link' to='/careers' onClick={() => setIsMenuOpen(!isMenuOpen)}>Careers</Link>
+                <div className='nav-link sm-nav-link gradient-text book-a-call-btn' to='/contact'>
+                    Book a call
+                    <PopupButton
+                        url="https://calendly.com/nexthorizonview/30min"
+                        rootElement={document.getElementById("root")}
+
+                    />
+                </div>
             </div>
             <Outlet />
             <div className='cursor'>

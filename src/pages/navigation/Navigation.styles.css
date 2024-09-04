@@ -89,6 +89,13 @@
     margin: 12px;
 }
 
+.gradient-text {
+    cursor: pointer;
+    width: max-content;
+    font-weight: bolder;
+    color: #8087FF;
+}
+
 @media(max-width: 900px) {
     .nav-container {
         background-color: transparent;
