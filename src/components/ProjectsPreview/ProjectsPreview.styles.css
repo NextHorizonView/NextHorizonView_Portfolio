@@ -20,14 +20,6 @@
     gap: 80px;
 }
 
-.project-sticky-text {
-    position: sticky;
-    top: 32px;
-    font-size: 18px;
-    width: 20%;
-    height: fit-content;
-}
-
 .projects-content-container .project-content-header {
     margin: 0;
     text-align: left;
@@ -55,10 +47,6 @@
     object-fit: cover;
     border-radius: 30px;
     object-position: center;
-}
-
-.project-item-img:hover {
-    filter: blur(3px);
 }
 
 .project-item-name {

@@ -52,9 +52,6 @@ const ProjectsPreview = () => {
 
                 <section className='projects-section'>
                     <div className='projects-content'>
-                        <div className='project-sticky-text'>
-                            [Case-Study]
-                        </div>
                         <div className='projects-content-container'>
                             <p className='project-content-header'>Award winning designs for clients and world class startups.</p>
                             {projects.map((project, index) => (

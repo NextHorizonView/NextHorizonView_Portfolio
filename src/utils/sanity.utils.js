@@ -77,7 +77,7 @@ export async function getProjectById(id) {
         'image5': image5.asset->url,
         description,
         service,
-        link,
+        links,
         about,
         challenges,
         results,

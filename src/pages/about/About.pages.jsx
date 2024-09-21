@@ -112,7 +112,7 @@ const About = () => {
                     </div>
                 </section>
 
-                <section className='about-awards'>
+                {/* <section className='about-awards'>
                     <div className='about-awards-container'>
                         <div className='about-awards-header-container'>
                             <img className='about-awards-img' src={awardsimg} />
@@ -172,7 +172,7 @@ const About = () => {
                             </motion.div>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
                 <section className='about-statistic'>
                     <div className='about-statistic-container'>
