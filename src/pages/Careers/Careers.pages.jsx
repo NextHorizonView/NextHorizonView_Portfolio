@@ -1,6 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Careers.styles.css';
+import Logo from '../../assets/logo.png';
 import { createWorkDocument } from '../../utils/firebase/firebase.utils';
+import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser'; // Import EmailJS
+const serviceid = import.meta.env.VITE_SERVICE_KEY;
+const templateid = import.meta.env.VITE_TEMPLATE_KEY;
+const userid = import.meta.env.VITE_PUBLIC_KEY;
 
 const roles = [
     'Frontend Developer',
@@ -21,6 +27,7 @@ const Careers = () => {
     const [referralCode, setReferralCode] = useState('');
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
+    const formRef = useRef(); // Create a reference to the form
 
     const handleResumeChange = (e) => {
         const file = e.target.files[0];
@@ -35,14 +42,27 @@ const Careers = () => {
 
     const handleRoleChange = (e) => {
         setRole(e.target.value);
-        if (e.target.value !== 'Other') {
-            setCustomRole(''); // Reset custom role when selecting a predefined role
+        if (e.target.value !== 'Other') setCustomRole('');
+    };
+
+    const sendEmail = async () => {
+        try {
+            await emailjs.sendForm(
+                serviceid, // Replace with your EmailJS service ID
+                templateid, // Replace with your template ID
+                formRef.current,
+                userid // Replace with your EmailJS user ID
+            );
+            alert('Application details submitted successfully!');
+        } catch (error) {
+            alert('Failed to send email: ' + error.message);
         }
     };
 
     const onSubmitHandler = async (e) => {
-        setLoading(true);
         e.preventDefault();
+        setLoading(true);
+
         const formData = {
             name,
             email,
@@ -51,125 +71,73 @@ const Careers = () => {
             role: role === 'Other' ? customRole : role,
             referralCode,
         };
+
         try {
-            await createWorkDocument(formData, resume);
+            await createWorkDocument(formData, resume); // Save the data to Firestore
+            await sendEmail(); // Send the form data via EmailJS
             alert('Application submitted successfully');
-            console.log('Application submitted successfully');
-            setName('');
-            setEmail('');
-            setLinkedin('');
-            setPhone('');
-            setRole('');
-            setResume(null);
-            setReferralCode('');
-            setCustomRole('')
+            // Clear the form
+            setName(''); setEmail(''); setLinkedin(''); setPhone('');
+            setRole(''); setResume(null); setReferralCode(''); setCustomRole('');
             fileInputRef.current.value = '';
         } catch (error) {
-            console.error('Error submitting application: ', error);
             alert(error.message);
         }
         setLoading(false);
-    }
+    };
 
     return (
         <div className="career-page">
-            <section className='career-section'>
-                <form className="career-form" onSubmit={onSubmitHandler}>
-                    <h1 className='career-form-header'>Apply for an Internship</h1>
-                    <div className='form-container'>
+            <section className="career-section">
+                <Link to='/' className='nav-logo'>
+                    <img className='nav-logo' src={Logo} alt='company-logo' />
+                </Link>
+                <form ref={formRef} className="career-form" onSubmit={onSubmitHandler}>
+                    <h1 className="career-form-header">Apply for an Internship</h1>
+                    <div className="form-grid">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
+                            <input name="from_name" className="inputtxt" type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="linkedin">LinkedIn</label>
-                            <input
-                                type="url"
-                                id="linkedin"
-                                value={linkedin}
-                                onChange={(e) => setLinkedin(e.target.value)}
-                                required
-                            />
+                            <input name="linkedin" className="inputtxt" type="url" id="linkedin" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} required />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="phone">Phone</label>
-                            <input
-                                type="number"
-                                id="phone"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                required
-                            />
+                            <label htmlFor="email">Email</label>
+                            <input name="email" className="inputtxt" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                         </div>
-                        <div className="form-group dropdown">
+                        <div className="form-group">
+                            <label htmlFor="referralCode">Referral Code (Optional)</label>
+                            <input name="referral_code" className="inputtxt" type="text" id="referralCode" value={referralCode} onChange={(e) => setReferralCode(e.target.value)} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="phone">Phone Number</label>
+                            <input name="phone" className="inputtxt" type="number" id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="resume">Resume</label>
+                            <input className="inputtxt" ref={fileInputRef} type="file" accept=".pdf" id="resume" onChange={handleResumeChange} required />
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="role">Role</label>
-                            <select
-                                id="role"
-                                value={role}
-                                onChange={handleRoleChange}
-                                required
-                            >
+                            <select name="role" className="inputtxt" id="role" value={role} onChange={handleRoleChange} required>
                                 <option value="" disabled>Select a role</option>
-                                {roles.map((roleOption) => (
-                                    <option key={roleOption} value={roleOption}>
-                                        {roleOption}
-                                    </option>
-                                ))}
+                                {roles.map((r) => <option key={r} value={r}>{r}</option>)}
                                 <option value="Other">Other</option>
                             </select>
-
                             {role === 'Other' && (
-                                <input
-                                    type="text"
-                                    value={customRole}
-                                    onChange={(e) => setCustomRole(e.target.value)}
-                                    placeholder="Enter role"
-                                    required
-                                    className='other-role-input'
-                                />
+                                <input className="inputtxt other-role-input" type="text" value={customRole} onChange={(e) => setCustomRole(e.target.value)} placeholder="Enter role" required />
                             )}
                         </div>
-                        <div className="form-group">
-                            <label htmlFor="phone">Referal Code(optional)</label>
-                            <input
-                                type="text"
-                                id="referralCode"
-                                value={referralCode}
-                                onChange={(e) => setReferralCode(e.target.value)}
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="resume">Upload Resume</label>
-                            <input
-                                ref={fileInputRef}
-                                type="file"
-                                accept=".pdf"
-                                id="resume"
-                                onChange={handleResumeChange}
-                                required
-                            />
-                        </div>
                     </div>
-                    {
-                        loading ? <p className='loading-message'>Sending....</p> :
+                    {loading ? (
+                        <p className="loading-message">Submitting...</p>
+                    ) : (
+                        <div className="submit-btn-container">
                             <button type="submit" className="submit-btn">Submit</button>
-                    }
+                        </div>
+                    )}
                 </form>
             </section>
         </div>
