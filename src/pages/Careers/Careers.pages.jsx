@@ -15,7 +15,22 @@ const roles = [
     'Data Scientist',
     'ML Engineer',
 ];
+function validateEnvVariables() {
+    const variables = { serviceid, templateid, userid };
+    let allValid = true;
 
+    // Loop through variables and log if any are missing/empty
+    for (const [key, value] of Object.entries(variables)) {
+        if (!value) {
+            console.error(`Error: ${key} is missing or empty.`);
+            allValid = false;
+        }
+    }
+
+    if (allValid) {
+        console.log('All environment variables are correctly set:', variables);
+    }
+}
 const Careers = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -28,7 +43,7 @@ const Careers = () => {
     const [loading, setLoading] = useState(false);
     const fileInputRef = useRef(null);
     const formRef = useRef(); // Create a reference to the form
-
+    validateEnvVariables();
     const handleResumeChange = (e) => {
         const file = e.target.files[0];
         if (file && file.size > 2 * 1024 * 1024) {
