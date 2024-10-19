@@ -1,5 +1,16 @@
+/* .career-page { */
+    /* background: radial-gradient(circle, rgb(51, 51, 121), rgba(0, 0, 1, 1)); */
+    /* background-image: url('/src/assets/Internship_background.png');
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 .career-page {
-    background: radial-gradient(circle, rgb(51, 51, 121), rgba(0, 0, 1, 1));
+    background-image: url('/src/assets/Internship_background.png');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     min-height: 100vh;
     display: flex;
     align-items: center;
