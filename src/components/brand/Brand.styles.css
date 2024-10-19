@@ -18,7 +18,9 @@
     background-position: center;
     background-size: cover;
 }
-
+.click-here{
+    color: #6472FF;
+}
 .banner-text {
     color: white;
     font-size: 48px;
@@ -108,7 +110,7 @@
 }
 
 .internship-banner a {
-    color: #8f9954;
+    color: #6472FF;
 }
 
 .video-player {

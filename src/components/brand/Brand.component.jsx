@@ -26,7 +26,7 @@ const Brand = () => {
                 ></video>
 
                 <motion.div className='internship-banner' transition={{ duration: 0.5 }} initial={{ opacity: 0, scale: 0.75, rotateX: '50deg' }} whileInView={{ opacity: 1, scale: 1, rotateX: '0deg' }} viewport={{ once: true }}>
-                    <p className='banner-text'>Want to apply for an internship? <Link to='/careers'>Click here</Link></p>
+                    <p className='banner-text'>Want to apply for an internship? <Link to='/careers' className='click-here'>Click here</Link></p>
                 </motion.div>
 
             </div>
