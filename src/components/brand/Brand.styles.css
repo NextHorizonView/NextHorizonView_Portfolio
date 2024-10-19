@@ -84,6 +84,10 @@
 }
 
 .internship-banner {
+    background-image: url('/src/assets/internship_tile.png');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
     width: 100%;
     display: flex;
     justify-content: center;
